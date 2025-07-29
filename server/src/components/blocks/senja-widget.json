@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_blocks_senja_widgets",
+  "info": {
+    "displayName": "Senja Widget"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "subheading": {
+      "type": "string"
+    },
+    "widgetUrl": {
+      "type": "string",
+      "required": true
+    },
+    "widgetId": {
+      "type": "string",
+      "required": true
+    },
+    "mode": {
+      "type": "enumeration",
+      "default": "shadow",
+      "enum": [
+        "shadow",
+        "inline"
+      ]
+    },
+    "lazyLoad": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "config": {}
+}

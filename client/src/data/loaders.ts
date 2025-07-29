@@ -36,6 +36,9 @@ const homePageQuery = qs.stringify({
             },
           },
         },
+        "blocks.senja-widget": {
+          populate: true,
+        },
         "blocks.info-block": {
           populate: {
             image: {
@@ -102,6 +105,21 @@ const pageBySlugQuery = (slug: string) =>
             },
           },
           "blocks.subscribe": {
+            populate: true,
+          },
+          "blocks.services-section": {
+            populate: {
+              services: {
+                populate: {
+                  logo: {
+                    fields: ["url", "alternativeText"],
+                  },
+                  link: true,
+                },
+              },
+            },
+          },
+          "blocks.senja-widget": {
             populate: true,
           },
         },

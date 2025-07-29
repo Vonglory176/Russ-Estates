@@ -26,7 +26,8 @@ export interface LinkProps {
     | "blocks.paragraph-with-image"
     | "blocks.paragraph"
     | "blocks.full-image"
-    | "blocks.services-section";
+    | "blocks.services-section"
+    | "blocks.senja-widget";
   
   interface Base<
     T extends ComponentType,
@@ -48,7 +49,8 @@ export interface LinkProps {
     | ParagraphWithImageProps
     | ParagraphProps
     | FullImageProps
-    | ServicesSectionProps;
+    | ServicesSectionProps
+    | SenjaWidgetProps;
   
   export interface HeroSectionProps extends Base<"blocks.hero-section"> {
     theme: "turquoise" | "orange";
@@ -107,4 +109,14 @@ export interface ServicesSectionProps extends Base<"blocks.services-section"> {
   subheading?: string;
   services: ServiceCardProps[];
   // columns?: 2 | 3 | 4;
+}
+
+// For Senja Reviews Widget
+export interface SenjaWidgetProps extends Base<"blocks.senja-widget"> {
+  heading: string;
+  subheading: string;
+  widgetUrl: string;
+  widgetId: string;
+  mode?: "shadow" | "inline";
+  lazyLoad?: boolean;
 }

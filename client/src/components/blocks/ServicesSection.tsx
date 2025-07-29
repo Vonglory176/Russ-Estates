@@ -66,7 +66,7 @@ export function ServicesSection({
           <p className="services__subheading">{subheading}</p>
         )}
       </div>
-      
+
       <div className={`services__grid services__grid--${columns}-cols`}>
         {services.map((service) => (
           <ServiceCard

@@ -22,7 +22,8 @@
       "components": [
         "blocks.info-block",
         "blocks.hero-section",
-        "blocks.services-section"
+        "blocks.services-section",
+        "blocks.senja-widget"
       ]
     }
   }

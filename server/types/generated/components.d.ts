@@ -76,6 +76,22 @@ export interface BlocksParagraphWithImage extends Struct.ComponentSchema {
   };
 }
 
+export interface BlocksSenjaWidget extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_senja_widgets';
+  info: {
+    displayName: 'Senja Widget';
+  };
+  attributes: {
+    heading: Schema.Attribute.String;
+    lazyLoad: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    mode: Schema.Attribute.Enumeration<['shadow', 'inline']> &
+      Schema.Attribute.DefaultTo<'shadow'>;
+    subheading: Schema.Attribute.String;
+    widgetId: Schema.Attribute.String & Schema.Attribute.Required;
+    widgetUrl: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface BlocksService extends Struct.ComponentSchema {
   collectionName: 'components_blocks_services';
   info: {
@@ -158,6 +174,7 @@ declare module '@strapi/strapi' {
       'blocks.info-block': BlocksInfoBlock;
       'blocks.paragraph': BlocksParagraph;
       'blocks.paragraph-with-image': BlocksParagraphWithImage;
+      'blocks.senja-widget': BlocksSenjaWidget;
       'blocks.service': BlocksService;
       'blocks.services-section': BlocksServicesSection;
       'elements.link': ElementsLink;

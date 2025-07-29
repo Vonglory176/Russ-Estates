@@ -416,7 +416,12 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
   };
   attributes: {
     blocks: Schema.Attribute.DynamicZone<
-      ['blocks.info-block', 'blocks.hero-section', 'blocks.services-section']
+      [
+        'blocks.info-block',
+        'blocks.hero-section',
+        'blocks.services-section',
+        'blocks.senja-widget',
+      ]
     >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
