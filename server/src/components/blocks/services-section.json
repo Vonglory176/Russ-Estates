@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_blocks_services_sections",
+  "info": {
+    "displayName": "Services Section"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "subheading": {
+      "type": "string"
+    },
+    "services": {
+      "type": "component",
+      "component": "blocks.service",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

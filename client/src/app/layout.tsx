@@ -36,7 +36,6 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   const { header, footer } = await loader()
-  console.log(header, footer)
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>

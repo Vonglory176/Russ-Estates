@@ -27,10 +27,13 @@ export interface BlocksHeroSection extends Struct.ComponentSchema {
     displayName: 'Hero Section';
   };
   attributes: {
+    content: Schema.Attribute.Text;
     cta: Schema.Attribute.Component<'elements.link', false>;
+    darken: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     heading: Schema.Attribute.String;
     image: Schema.Attribute.Media<'images'>;
     logo: Schema.Attribute.Component<'elements.logo', false>;
+    subheading: Schema.Attribute.String;
     theme: Schema.Attribute.Enumeration<['turquoise', 'orange']>;
   };
 }
@@ -70,6 +73,31 @@ export interface BlocksParagraphWithImage extends Struct.ComponentSchema {
     image: Schema.Attribute.Media<'images'>;
     imageLandscape: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
     reversed: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+  };
+}
+
+export interface BlocksService extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_services';
+  info: {
+    displayName: 'Service';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    icon: Schema.Attribute.Media<'images'>;
+    link: Schema.Attribute.Component<'elements.link', false>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface BlocksServicesSection extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_services_sections';
+  info: {
+    displayName: 'Services Section';
+  };
+  attributes: {
+    heading: Schema.Attribute.String;
+    services: Schema.Attribute.Component<'blocks.service', true>;
+    subheading: Schema.Attribute.String;
   };
 }
 
@@ -130,6 +158,8 @@ declare module '@strapi/strapi' {
       'blocks.info-block': BlocksInfoBlock;
       'blocks.paragraph': BlocksParagraph;
       'blocks.paragraph-with-image': BlocksParagraphWithImage;
+      'blocks.service': BlocksService;
+      'blocks.services-section': BlocksServicesSection;
       'elements.link': ElementsLink;
       'elements.logo': ElementsLogo;
       'layout.footer': LayoutFooter;

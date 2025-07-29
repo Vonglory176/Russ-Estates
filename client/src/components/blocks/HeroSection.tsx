@@ -5,15 +5,19 @@ import type { HeroSectionProps } from "@/types";
 export function HeroSection({
   theme,
   heading,
+  subheading,
+  content,
   cta,
   image,
   logo,
   author,
   publishedAt,
-  darken = false,
+  darken,
 }: Readonly<HeroSectionProps>) {
   return (
     <section className="hero">
+
+      {/* Background Image */}
       <div className="hero__background">
         <StrapiImage
           src={image.url}
@@ -24,11 +28,22 @@ export function HeroSection({
         />
         {darken && <div className="hero__background__overlay"></div>}
       </div>
+
+      {/* Headline */}
       <div className={`hero__headline hero__headline--${theme}`}>
+        
+        {subheading && <p className="hero__subheading text-blue-500">{subheading}</p>}
+
         <h1>{heading}</h1>
+
+        {content && <p className="hero__content">{content}</p>}
+
+        {/* Author and Published At */}
         {author && <p className="hero__author">{author}</p>}
         {publishedAt && <p className="hero__published-at">{publishedAt}</p>}
       </div>
+
+      {/* CTA */}
       {cta && (
         <button className={`btn btn--medium btn--${theme}`}>
           <Link href={cta.href} target={cta.isExternal ? "_blank" : "_self"}>
@@ -36,6 +51,8 @@ export function HeroSection({
           </Link>
         </button>
       )}
+
+      {/* Logo */}
       {logo && (
         <StrapiImage
           src={logo.image.url}

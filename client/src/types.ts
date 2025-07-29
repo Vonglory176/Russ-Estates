@@ -25,7 +25,8 @@ export interface LinkProps {
     | "blocks.heading"
     | "blocks.paragraph-with-image"
     | "blocks.paragraph"
-    | "blocks.full-image";
+    | "blocks.full-image"
+    | "blocks.services-section";
   
   interface Base<
     T extends ComponentType,
@@ -46,11 +47,14 @@ export interface LinkProps {
     | HeadingProps
     | ParagraphWithImageProps
     | ParagraphProps
-    | FullImageProps;
+    | FullImageProps
+    | ServicesSectionProps;
   
   export interface HeroSectionProps extends Base<"blocks.hero-section"> {
     theme: "turquoise" | "orange";
     heading: string;
+    subheading: string;
+    content: string;
     image: ImageProps;
     cta?: LinkProps;
     logo?: LogoProps;
@@ -88,3 +92,19 @@ export interface LinkProps {
     __component: "blocks.full-image";
     image: ImageProps;
   }
+
+export interface ServiceCardProps {
+  id: number;
+  title: string;
+  description: string;
+  icon: ImageProps;
+  link?: LinkProps;
+}
+
+export interface ServicesSectionProps extends Base<"blocks.services-section"> {
+  // theme: "turquoise" | "orange";
+  heading: string;
+  subheading?: string;
+  services: ServiceCardProps[];
+  // columns?: 2 | 3 | 4;
+}

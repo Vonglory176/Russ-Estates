@@ -17,8 +17,18 @@
         "images"
       ]
     },
+    "darken": {
+      "type": "boolean",
+      "default": false
+    },
     "heading": {
       "type": "string"
+    },
+    "subheading": {
+      "type": "string"
+    },
+    "content": {
+      "type": "text"
     },
     "cta": {
       "type": "component",

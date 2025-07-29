@@ -24,6 +24,18 @@ const homePageQuery = qs.stringify({
             cta: true,
           },
         },
+        "blocks.services-section": {
+          populate: {
+            services: {
+              populate: {
+                icon: {
+                  fields: ["url", "alternativeText"],
+                },
+                link: true,
+              },
+            },
+          },
+        },
         "blocks.info-block": {
           populate: {
             image: {

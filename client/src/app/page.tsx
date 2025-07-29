@@ -13,9 +13,9 @@ async function loader() {
 export default async function HomeRoute() {
   const data = await loader();
   const blocks = data?.blocks || [];
-  console.log(data);
+  console.log(blocks);
   return (
-    <div>
+    <div>      
       <BlockRenderer blocks={blocks} />
     </div>
   );
