@@ -32,7 +32,7 @@ export function HeroSection({
       {/* Headline */}
       <div className={`hero__headline hero__headline--${theme}`}>
         
-        {subheading && <p className="hero__subheading text-blue-500">{subheading}</p>}
+        {subheading && <p className="hero__subheading">{subheading}</p>}
 
         <h1>{heading}</h1>
 

@@ -59,12 +59,12 @@ export function ServicesSection({
   return (
     <section className={`services services--${theme}`}>
       <div className="services__header">
-        <h2 className={`services__heading services__heading--${theme}`}>
-          {heading}
-        </h2>
         {subheading && (
           <p className="services__subheading">{subheading}</p>
         )}
+        <h2 className={`services__heading services__heading--${theme}`}>
+          {heading}
+        </h2>
       </div>
 
       <div className={`services__grid services__grid--${columns}-cols`}>
