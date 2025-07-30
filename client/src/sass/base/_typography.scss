@@ -12,28 +12,32 @@ p {
   line-height: 3rem;
 }
 
-h1 {
+h1, .h1 {
   font-size: max(min(8rem, 10vw), 5rem); // 8rem;
   font-weight: 600;
-  // line-height: 120%;
+  line-height: 120%;
 }
 
-h2 {
+h2, .h2 {
   font-size: max(min(5rem, 6vw), 3rem); // 6rem;
+  font-weight: 600;
 }
 
-h3 {
+h3, .h3 {
   font-size: max(min(4rem, 4vw), 3rem); // 4rem;
+  font-weight: 600;
   line-height: 4.7rem;
 }
 
-h4 {
+h4, .h4 {
   font-size: max(min(3rem, 3vw), 2rem); // 3rem;
+  // font-weight: 600;
   line-height: 3.6rem;
 }
 
-h5 {
+h5, .h5 {
   font-size: 2rem; // 2rem;
+  font-weight: 600;
   line-height: 3rem;
 }
 
