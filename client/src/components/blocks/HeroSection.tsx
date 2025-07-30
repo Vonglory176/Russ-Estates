@@ -32,7 +32,7 @@ export function HeroSection({
       {/* Headline */}
       <div className={`hero__headline hero__headline--${theme}`}>
         
-        {subheading && <p className="hero__subheading">{subheading}</p>}
+        {subheading && <p className="hero__subheading h4">{subheading}</p>}
 
         <h1>{heading}</h1>
 
@@ -45,7 +45,7 @@ export function HeroSection({
 
       {/* CTA */}
       {cta && (
-        <button className={`btn btn--medium btn--${theme}`}>
+        <button className={`hero__cta btn btn--medium btn--${theme}`}>
           <Link href={cta.href} target={cta.isExternal ? "_blank" : "_self"}>
             {cta.text}
           </Link>
