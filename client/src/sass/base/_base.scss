@@ -16,6 +16,19 @@ main {
   min-height: calc(100vh - 13rem);
 }
 
+section {
+  margin: 8rem auto;
+  padding: 0 2rem;
+  max-width: 140rem;
+}
+
+// REMOVE LATER
+.senja-embed {
+  // display: none !important;
+  max-height: 451px;
+  overflow: hidden;
+}
+
 a {
   color: inherit;
   text-decoration: none;
