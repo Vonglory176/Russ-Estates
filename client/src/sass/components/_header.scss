@@ -1,22 +1,22 @@
 .header {
-  
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 2rem 4.8rem;
-  z-index: 10;
+  z-index: 100;
   background-color: $light-beige;
+  max-width: 140rem;
+  margin: 0 auto;
+  
+  // background-color: #FAFAFA;
+  // border-radius: 3rem;
+  // margin-bottom: 2rem;
 
-  &--light {
-    color: white;
-    background-color: $orange;
-  }
-
-
-  &--white {
-    filter: invert(100%) sepia(0%) saturate(7499%) hue-rotate(25deg) brightness(102%) contrast(101%);
-    
-  }
+  // &--light {
+  //   color: white;
+  //   background-color: $orange;
+  // }
 
   img {
     height: auto;
@@ -27,21 +27,170 @@
     height: auto;
     width: 5rem;
 
-    &--black {
-      filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(25deg) brightness(102%) contrast(101%);
-    }
+    // &--black {
+    //   filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(25deg) brightness(102%) contrast(101%);
+    // }
 
-    &--white {
-      filter: invert(100%) sepia(0%) saturate(7499%) hue-rotate(25deg) brightness(102%) contrast(101%);
-    }
+    // &--white {
+    //   filter: invert(100%) sepia(0%) saturate(7499%) hue-rotate(25deg) brightness(102%) contrast(101%);
+    // }
   }
 
+  // Desktop Navigation
   &__nav {
     display: flex;
     list-style: none;
-
+    
     & li:not(:last-of-type) {
       margin-right: 4.6rem;
     }
+
+    &--desktop {
+      @include respond(phone) {
+        display: none;
+      }
+    }
+  }
+
+  // Desktop CTA
+  &__cta {
+    &--desktop {
+      @include respond(phone) {
+        display: none;
+      }
+    }
+  }
+
+  // Mobile Navigation Toggle (Hamburger)
+  &__nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    // padding: 1rem;
+    z-index: 101;
+    transition: all 0.3s ease;
+    min-width: 5rem;
+    min-height: 5rem;
+
+    @include respond(phone) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &__icon {
+      width: 100%;
+      height: 100%;
+      // width: 3.2rem;
+      // height: 3.2rem;
+      color: inherit;
+      transition: all 0.3s ease;
+    }
+  }
+
+  // Mobile Navigation Overlay
+  &__mobile-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.95);
+    z-index: 99;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &--open {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  // Mobile Navigation
+  &__mobile-nav {
+    text-align: center;
+    color: white;
+    width: 100%;
+    max-width: 40rem;
+    padding: 2rem;
+
+    &__list {
+      list-style: none;
+      margin-bottom: 4rem;
+    }
+
+    &__item {
+      margin-bottom: 3rem;
+      opacity: 0;
+      transform: translateY(2rem);
+      animation: slideInUp 0.5s ease forwards;
+
+      &:nth-child(1) { animation-delay: 0.1s; }
+      &:nth-child(2) { animation-delay: 0.2s; }
+      &:nth-child(3) { animation-delay: 0.3s; }
+      &:nth-child(4) { animation-delay: 0.4s; }
+      &:nth-child(5) { animation-delay: 0.5s; }
+
+      a {
+        color: white;
+        text-decoration: none;
+        font-size: 2.4rem;
+        font-weight: 500;
+        transition: all 0.3s ease;
+
+        &:hover {
+          color: $orange;
+          transform: scale(1.05);
+        }
+      }
+    }
+
+    &__cta {
+      opacity: 0;
+      transform: translateY(2rem);
+      animation: slideInUp 0.5s ease 0.6s forwards;
+
+      .btn {
+        background-color: white;
+        color: black;
+        border: 2px solid white;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background-color: transparent;
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+// Animation for mobile menu items
+@keyframes slideInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Responsive adjustments
+@include respond(tab-land) {
+  .header {
+    padding: 2rem 3rem;
+  }
+}
+
+@include respond(phone) {
+  .header {
+    padding: 2rem 2rem;
   }
 }
