@@ -3,25 +3,26 @@
   text-align: center;
 
   &__header {
-    margin-bottom: 6rem;
+    margin-bottom: 3rem;
   }
 
-  &__heading {
-    // font-size: 3.6rem;
-    // font-weight: 700;
-    // margin-bottom: 2rem;
+  // &__heading {
+  //   font-size: 3.6rem;
+  //   font-weight: 700;
+  //   margin-bottom: 2rem;
 
-    // &--orange {
-    // //   color: $orange;
-    // }
-  }
+  //   &--orange {
+  //   //   color: $orange;
+  //   }
+  // }
 
   &__subheading {
-    font-size: 1.8rem;
+    // font-size: 1.8rem;
     // color: $text-secondary;
-    max-width: 60rem;
-    margin: 0 auto;
-    line-height: 1.6;
+    // max-width: 60rem;
+    // margin: 0 auto;
+    // line-height: 1.6;
+    margin-bottom: 2rem;
   }
 
   &__grid {
@@ -49,13 +50,13 @@
 //   background: $white;
   border-radius: 1.2rem;
   padding: 3rem 2rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
+  // box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  // transition: all 0.3s ease;
   height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
+  // align-items: center;
+  text-align: left;
 
   &__wrapper {
     display: block;
@@ -63,10 +64,10 @@
     color: inherit;
     height: 100%;
 
-    &:hover .service-card {
-      transform: translateY(-8px);
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
-    }
+    // &:hover .service-card {
+    //   transform: translateY(-8px);
+    //   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    // }
   }
 
   &__logo {
@@ -78,7 +79,7 @@
     justify-content: center;
     // background: $light-gray;
     border-radius: 50%;
-    padding: 1.5rem;
+    // padding: 1.5rem;
 
     &-img {
       width: 100%;
@@ -88,8 +89,8 @@
   }
 
   &__title {
-    font-size: 2.2rem;
-    font-weight: 600;
+    // font-size: 2.2rem;
+    // font-weight: 600;
     margin-bottom: 1.5rem;
     // color: $text-primary;
   }
@@ -109,8 +110,8 @@
     text-decoration: none;
     transition: color 0.3s ease;
 
-    &:hover {
+    // &:hover {
     //   color: darken($turquoise, 10%);
-    }
+    // }
   }
 } 

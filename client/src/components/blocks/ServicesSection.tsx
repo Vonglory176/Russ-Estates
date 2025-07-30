@@ -20,7 +20,7 @@ function ServiceCard({ title, description, icon, link }: {
           className="service-card__logo-img"
         />
       </div>
-      <h3 className="service-card__title">{title}</h3>
+      <h3 className="service-card__title h4">{title}</h3>
       <p className="service-card__description">{description}</p>
       {link && (
         <span className="service-card__link">

@@ -79,6 +79,10 @@
   &__content {
     margin: 0 auto;
     max-width: 550px;
+
+    @include respond(desktop) {
+      margin: 0;
+    }
   }
 
   &__author,
@@ -113,10 +117,10 @@
     left: 50%;
     transform: translate(-50%, 50%);
 
-    &--orange {
-      filter: invert(62%) sepia(21%) saturate(1646%) hue-rotate(348deg)
-        brightness(88%) contrast(81%);
-    }
+    // &--orange {
+    //   filter: invert(62%) sepia(21%) saturate(1646%) hue-rotate(348deg)
+    //     brightness(88%) contrast(81%);
+    // }
 
     @include respond(phone) {
       width: 80px;
