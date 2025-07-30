@@ -60,8 +60,8 @@ export function SenjaWidget({
   }, [scriptUrl, widgetId, mode, lazyLoad]);
 
   return (
-    <div className="senja-widget">
-      <h2 className="senja-widget__heading">{heading}</h2>
+    <section className="senja-widget">
+      <h2 className="senja-widget__headline">{heading}</h2>
       <p className="senja-widget__subheading">{subheading}</p>
       <div
         className="senja-embed"
@@ -70,6 +70,6 @@ export function SenjaWidget({
         data-lazyload={lazyLoad.toString()}
         style={{ display: "block", width: "100%" }}
       />
-    </div>
+    </section>
   );
 }
