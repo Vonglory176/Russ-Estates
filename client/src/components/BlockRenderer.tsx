@@ -6,7 +6,7 @@ import { ServicesSection } from "@/components/blocks/ServicesSection";
 import { SenjaWidget } from "@/components/blocks/SenjaWidget";
 // import { Heading } from "@/components/blocks/Heading";
 // import { ParagraphWithImage } from "@/components/blocks/ParagraphWithImage";
-import { Paragraph } from "@/components/blocks/Paragraph";
+// import { Paragraph } from "@/components/blocks/Paragraph";
 // import { FullImage } from "@/components/blocks/FullImage";
 
 function blockRenderer(block: Block, index: number) {
@@ -23,8 +23,8 @@ function blockRenderer(block: Block, index: number) {
     //   return <Heading {...block} key={index} />;
     // case "blocks.paragraph-with-image":
     //   return <ParagraphWithImage {...block} key={index} />;
-    case "blocks.paragraph":
-      return <Paragraph {...block} key={index} />;
+    // case "blocks.paragraph":
+    //   return <Paragraph {...block} key={index} />;
     // case "blocks.full-image":
     //   return <FullImage {...block} key={index} />;
     default:
