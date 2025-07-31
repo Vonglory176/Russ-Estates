@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_blocks_form_sections",
+  "info": {
+    "displayName": "Form Section"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "subheading": {
+      "type": "string"
+    },
+    "contactForm": {
+      "type": "component",
+      "component": "elements.hubspot-embed",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

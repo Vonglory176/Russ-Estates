@@ -41,6 +41,11 @@
         "turquoise",
         "orange"
       ]
+    },
+    "contactForm": {
+      "type": "component",
+      "component": "elements.contact-form-config",
+      "repeatable": false
     }
   },
   "config": {}

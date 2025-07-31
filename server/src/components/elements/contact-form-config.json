@@ -1,0 +1,50 @@
+{
+  "collectionName": "components_elements_contact_form_configs",
+  "info": {
+    "displayName": "Contact Form Configuration",
+    "description": "Configure which fields to show in the contact form and form settings"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string",
+      "default": "Get in Touch",
+      "description": "Form heading displayed above the form"
+    },
+    "description": {
+      "type": "text",
+      "default": "Ready to start your project? Let's discuss how we can help bring your vision to life.",
+      "description": "Form description displayed below the heading"
+    },
+    "theme": {
+      "type": "enumeration",
+      "enum": [
+        "turquoise",
+        "orange"
+      ],
+      "default": "turquoise",
+      "description": "Color theme for the form styling"
+    },
+    "fields": {
+      "type": "component",
+      "component": "elements.form-fields",
+      "repeatable": false,
+      "description": "Configure which fields to show and their properties"
+    },
+    "hubspotFormId": {
+      "type": "string",
+      "required": false,
+      "description": "HubSpot Form ID (optional - can use environment variables instead)"
+    },
+    "hubspotPortalId": {
+      "type": "string",
+      "required": false,
+      "description": "HubSpot Portal ID (optional - can use environment variables instead)"
+    },
+    "useDefaultFieldConfig": {
+      "type": "boolean",
+      "default": true,
+      "description": "Use sensible default field configuration for real estate contact forms"
+    }
+  }
+}

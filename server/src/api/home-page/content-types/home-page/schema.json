@@ -23,7 +23,9 @@
         "blocks.info-block",
         "blocks.hero-section",
         "blocks.services-section",
-        "blocks.senja-widget"
+        "blocks.senja-widget",
+        "blocks.form-section",
+        "elements.contact-form-config"
       ]
     }
   }

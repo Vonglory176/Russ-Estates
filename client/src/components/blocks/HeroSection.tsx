@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { StrapiImage } from "../StrapiImage";
+import { DynamicContactForm } from "../forms/DynamicContactForm";
 import type { HeroSectionProps } from "@/types";
 
 export function HeroSection({
@@ -13,6 +14,7 @@ export function HeroSection({
   author,
   publishedAt,
   darken,
+  contactForm,
 }: Readonly<HeroSectionProps>) {
   return (
     <section className="hero">
@@ -30,8 +32,9 @@ export function HeroSection({
       </div>
 
       {/* Headline */}
-      <div className={`hero__headline hero__headline--${theme}`}>
-        
+      <div className="hero__container-left">
+        <div className={`hero__headline hero__headline--${theme}`}>
+          
         {subheading && <p className="hero__subheading h4">{subheading}</p>}
 
         <h1>{heading}</h1>
@@ -51,6 +54,18 @@ export function HeroSection({
           </Link>
         </button>
       )}
+      </div>
+
+      <div className="hero__container-right">
+        {/* Dynamic Contact Form */}
+        {contactForm && (
+          <div className="hero__contact-form">
+            <DynamicContactForm 
+              config={contactForm}
+            />
+          </div>
+        )}
+      </div>
 
       {/* Logo */}
       {logo && (

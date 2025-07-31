@@ -421,6 +421,8 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
         'blocks.hero-section',
         'blocks.services-section',
         'blocks.senja-widget',
+        'blocks.form-section',
+        'elements.contact-form-config',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;

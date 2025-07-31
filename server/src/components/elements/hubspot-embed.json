@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_elements_hubspot_embeds",
+  "info": {
+    "displayName": "Hubspot Form"
+  },
+  "options": {},
+  "attributes": {
+    "script": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

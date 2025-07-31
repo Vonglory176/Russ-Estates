@@ -16,6 +16,41 @@ export interface LinkProps {
     logoText: string;
     image: ImageProps;
   }
+
+  export interface FormFieldConfig {
+    enabled: boolean;
+    required: boolean;
+    label?: string;
+    placeholder?: string;
+    order: number;
+    fieldType: 'text' | 'email' | 'tel' | 'textarea';
+    validation?: {
+      required?: boolean;
+      maxLength?: number;
+      customErrorMessage?: string;
+    };
+  }
+
+  export interface FormFieldsConfig {
+    firstName?: FormFieldConfig;
+    lastName?: FormFieldConfig;
+    email?: FormFieldConfig;
+    phone?: FormFieldConfig;
+    company?: FormFieldConfig;
+    jobTitle?: FormFieldConfig;
+    propertyAddress?: FormFieldConfig;
+    message?: FormFieldConfig;
+  }
+
+  export interface ContactFormProps {
+    heading?: string;
+    description?: string;
+    theme?: 'turquoise' | 'orange';
+    fields: FormFieldsConfig;
+    hubspotFormId?: string;
+    hubspotPortalId?: string;
+    useDefaultFieldConfig?: boolean;
+  }
   
   type ComponentType =
     | "blocks.hero-section"
@@ -62,6 +97,7 @@ export interface LinkProps {
     logo?: LogoProps;
     author?: string;
     darken?: boolean;
+    contactForm?: ContactFormProps;
   }
   
   export interface InfoBlockProps extends Base<"blocks.info-block"> {

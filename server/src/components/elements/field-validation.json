@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_elements_field_validations",
+  "info": {
+    "displayName": "Field Validation Rules",
+    "description": "Basic validation rules for form fields (client-side validation handles most cases)"
+  },
+  "options": {},
+  "attributes": {
+    "required": {
+      "type": "boolean",
+      "default": false,
+      "description": "Make this field required"
+    },
+    "maxLength": {
+      "type": "integer",
+      "default": 1000,
+      "description": "Maximum number of characters allowed"
+    },
+    "customErrorMessage": {
+      "type": "string",
+      "description": "Custom error message (optional)"
+    }
+  }
+}

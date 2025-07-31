@@ -22,6 +22,22 @@ const homePageQuery = qs.stringify({
               },
             },
             cta: true,
+            contactForm: {
+              populate: {
+                fields: {
+                  populate: {
+                    firstName: true,
+                    lastName: true,
+                    email: true,
+                    phone: true,
+                    company: true,
+                    jobTitle: true,
+                    propertyAddress: true,
+                    message: true,
+                  }
+                }
+              }
+            }
           },
         },
         "blocks.services-section": {
@@ -47,6 +63,9 @@ const homePageQuery = qs.stringify({
             cta: true,
           },
         },
+        // "blocks.contact-form": {
+        //   populate: true,
+        // },
       },
     },
   },
@@ -86,6 +105,22 @@ const pageBySlugQuery = (slug: string) =>
                 },
               },
               cta: true,
+              contactForm: {
+                populate: {
+                  fields: {
+                    populate: {
+                      firstName: true,
+                      lastName: true,
+                      email: true,
+                      phone: true,
+                      company: true,
+                      jobTitle: true,
+                      propertyAddress: true,
+                      message: true,
+                    }
+                  }
+                }
+              }
             },
           },
           "blocks.info-block": {

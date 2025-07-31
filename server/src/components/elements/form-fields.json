@@ -1,0 +1,58 @@
+{
+  "collectionName": "components_elements_form_fields",
+  "info": {
+    "displayName": "Form Fields Configuration",
+    "description": "Configure which fields to show in the contact form"
+  },
+  "options": {},
+  "attributes": {
+    "firstName": {
+      "type": "component",
+      "component": "elements.form-field",
+      "repeatable": false,
+      "description": "First Name field configuration"
+    },
+    "lastName": {
+      "type": "component",
+      "component": "elements.form-field",
+      "repeatable": false,
+      "description": "Last Name field configuration"
+    },
+    "email": {
+      "type": "component",
+      "component": "elements.form-field",
+      "repeatable": false,
+      "description": "Email Address field configuration"
+    },
+    "phone": {
+      "type": "component",
+      "component": "elements.form-field",
+      "repeatable": false,
+      "description": "Phone Number field configuration"
+    },
+    "company": {
+      "type": "component",
+      "component": "elements.form-field",
+      "repeatable": false,
+      "description": "Company field configuration"
+    },
+    "jobTitle": {
+      "type": "component",
+      "component": "elements.form-field",
+      "repeatable": false,
+      "description": "Job Title field configuration"
+    },
+    "propertyAddress": {
+      "type": "component",
+      "component": "elements.form-field",
+      "repeatable": false,
+      "description": "Property Address field configuration"
+    },
+    "message": {
+      "type": "component",
+      "component": "elements.form-field",
+      "repeatable": false,
+      "description": "Message field configuration"
+    }
+  }
+}

@@ -1,0 +1,219 @@
+.custom-contact-form {
+  background-color: rgba(255, 255, 255, 0.3); // rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(1rem);
+  border-radius: 2rem;
+  padding: 3rem;
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.1);
+//   border: 1px solid rgba(255, 255, 255, 0.2);
+  max-width: 60rem;
+  width: 100%;
+  margin: 0 auto;
+
+  @include respond(phone) {
+    padding: 2rem;
+    border-radius: 1.5rem;
+  }
+
+  &__header {
+    text-align: center;
+    margin-bottom: 3rem;
+
+    @include respond(desktop) {
+      text-align: left;
+    }
+  }
+
+  &__heading {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--color-text-primary);
+
+    @include respond(phone) {
+      font-size: 2.4rem;
+    }
+  }
+
+  &__description {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: var(--color-text-secondary);
+    margin: 0;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+
+    @include respond(tab-port) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  &__label {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin: 0;
+  }
+
+  &__input,
+  &__textarea {
+    padding: 1.2rem 1.6rem;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+    font-size: 1.6rem;
+    font-family: inherit;
+    background: rgba(255, 255, 255, 0.8);
+    transition: all 0.3s ease;
+    resize: vertical;
+
+    &::placeholder {
+      color: rgba(0, 0, 0, 0.5);
+    }
+
+    &:focus {
+      outline: none;
+      border-color: var(--color-primary);
+      background: rgba(255, 255, 255, 0.95);
+      box-shadow: 0 0 0 3px rgba(var(--color-primary-rgb), 0.1);
+    }
+
+    &--error {
+      border-color: #e74c3c;
+      background: rgba(231, 76, 60, 0.05);
+
+      &:focus {
+        border-color: #e74c3c;
+        box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1);
+      }
+    }
+  }
+
+  &__textarea {
+    min-height: 12rem;
+    line-height: 1.5;
+  }
+
+  &__error-text {
+    font-size: 1.3rem;
+    color: #e74c3c;
+    margin: 0;
+    font-weight: 500;
+  }
+
+  &__submit {
+    margin-top: 1rem;
+    align-self: flex-start;
+    min-width: 16rem;
+    transition: all 0.3s ease;
+
+    &:disabled {
+      opacity: 0.7;
+      cursor: not-allowed;
+    }
+
+    &:not(:disabled):hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  &__success,
+  &__error {
+    padding: 2rem;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  &__success {
+    background: rgba(46, 204, 113, 0.1);
+    border: 2px solid rgba(46, 204, 113, 0.3);
+    color: #27ae60;
+
+    h3 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin: 0 0 1rem 0;
+      color: #27ae60;
+    }
+
+    p {
+      font-size: 1.6rem;
+      margin: 0;
+      line-height: 1.5;
+    }
+  }
+
+  &__error {
+    background: rgba(231, 76, 60, 0.1);
+    border: 2px solid rgba(231, 76, 60, 0.3);
+    color: #e74c3c;
+
+    p {
+      font-size: 1.6rem;
+      margin: 0;
+      line-height: 1.5;
+    }
+  }
+
+  // Theme variations
+  &--turquoise {
+    .custom-contact-form__input:focus,
+    .custom-contact-form__textarea:focus {
+      border-color: var(--color-turquoise);
+      box-shadow: 0 0 0 3px rgba(var(--color-turquoise-rgb), 0.1);
+    }
+  }
+
+  &--orange {
+    .custom-contact-form__input:focus,
+    .custom-contact-form__textarea:focus {
+      border-color: var(--color-orange);
+      box-shadow: 0 0 0 3px rgba(var(--color-orange-rgb), 0.1);
+    }
+  }
+
+  // Animation for form appearance
+  animation: slideInUp 0.6s ease-out;
+
+  @keyframes slideInUp {
+    from {
+      opacity: 0;
+      transform: translateY(3rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+// Responsive adjustments
+@include respond(phone) {
+  .custom-contact-form {
+    &__row {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    &__submit {
+      width: 100%;
+      min-width: auto;
+    }
+  }
+} 
