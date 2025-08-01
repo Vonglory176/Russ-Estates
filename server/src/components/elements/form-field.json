@@ -8,38 +8,27 @@
   "attributes": {
     "enabled": {
       "type": "boolean",
-      "default": true,
-      "description": "Show this field in the form"
+      "default": true
     },
     "label": {
-      "type": "string",
-      "description": "Field label displayed to users"
+      "type": "string"
     },
     "placeholder": {
-      "type": "string",
-      "description": "Placeholder text shown in the input field"
+      "type": "string"
     },
     "order": {
       "type": "integer",
-      "default": 0,
-      "description": "Display order of the field (lower numbers appear first)"
+      "default": 0
     },
     "fieldType": {
       "type": "enumeration",
+      "default": "text",
       "enum": [
         "text",
         "email",
         "tel",
         "textarea"
-      ],
-      "default": "text",
-      "description": "Type of input field"
-    },
-    "validation": {
-      "type": "component",
-      "component": "elements.field-validation",
-      "repeatable": false,
-      "description": "Basic validation rules for this field"
+      ]
     }
   }
 }

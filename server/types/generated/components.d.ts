@@ -61,7 +61,7 @@ export interface BlocksInfoBlock extends Struct.ComponentSchema {
   };
   attributes: {
     content: Schema.Attribute.RichText;
-    cta: Schema.Attribute.Component<'elements.link', false>;
+    cta: Schema.Attribute.Component<'elements.link', true>;
     headline: Schema.Attribute.String;
     image: Schema.Attribute.Media<'images'>;
     reversed: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
@@ -115,7 +115,7 @@ export interface BlocksService extends Struct.ComponentSchema {
   };
   attributes: {
     description: Schema.Attribute.Text;
-    icon: Schema.Attribute.Media<'images'>;
+    icon: Schema.Attribute.Component<'elements.react-icon', false>;
     link: Schema.Attribute.Component<'elements.link', false>;
     title: Schema.Attribute.String;
   };
@@ -182,7 +182,6 @@ export interface ElementsFormField extends Struct.ComponentSchema {
     label: Schema.Attribute.String;
     order: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
     placeholder: Schema.Attribute.String;
-    validation: Schema.Attribute.Component<'elements.field-validation', false>;
   };
 }
 
@@ -237,6 +236,90 @@ export interface ElementsLogo extends Struct.ComponentSchema {
   };
 }
 
+export interface ElementsReactIcon extends Struct.ComponentSchema {
+  collectionName: 'components_elements_react_icons';
+  info: {
+    displayName: 'React Icon';
+  };
+  attributes: {
+    color: Schema.Attribute.String & Schema.Attribute.DefaultTo<'#000000'>;
+    name: Schema.Attribute.Enumeration<
+      [
+        'FaHome',
+        'FaBuilding',
+        'FaSearch',
+        'FaMapMarkerAlt',
+        'FaPhone',
+        'FaEnvelope',
+        'FaUser',
+        'FaKey',
+        'FaCalculator',
+        'FaChartLine',
+        'FaShieldAlt',
+        'FaStar',
+        'FaHeart',
+        'FaEye',
+        'FaHandshake',
+        'FaDollarSign',
+        'FaClipboardList',
+        'FaTools',
+        'FaCog',
+        'FaLightbulb',
+        'FaRocket',
+        'FaAward',
+        'FaCheckCircle',
+        'FaInfoCircle',
+        'FaQuestionCircle',
+        'FaExclamationTriangle',
+        'MdApartment',
+        'MdBusiness',
+        'MdLocationOn',
+        'MdEmail',
+        'MdPhone',
+        'MdHome',
+        'MdSearch',
+        'MdPerson',
+        'MdSettings',
+        'MdHelp',
+        'MdInfo',
+        'IoBusiness',
+        'IoHome',
+        'IoSearch',
+        'IoLocation',
+        'IoMail',
+        'IoCall',
+        'IoPerson',
+        'IoKey',
+        'IoCalculator',
+        'IoStatsChart',
+        'IoShield',
+        'IoStar',
+        'IoHeart',
+        'IoEye',
+        'GiHouse',
+        'GiModernCity',
+        'GiMagnifyingGlass',
+        'GiPhone',
+        'GiKey',
+        'GiCalculator',
+        'GiChart',
+        'GiShield',
+        'GiHearts',
+        'GiMoneyStack',
+        'GiToolbox',
+        'GiGears',
+        'GiLightBulb',
+        'GiRocket',
+        'GiTrophy',
+        'GiCheckMark',
+        'GiInfo',
+      ]
+    > &
+      Schema.Attribute.Required;
+    size: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<24>;
+  };
+}
+
 export interface LayoutFooter extends Struct.ComponentSchema {
   collectionName: 'components_layout_footers';
   info: {
@@ -282,6 +365,7 @@ declare module '@strapi/strapi' {
       'elements.hubspot-embed': ElementsHubspotEmbed;
       'elements.link': ElementsLink;
       'elements.logo': ElementsLogo;
+      'elements.react-icon': ElementsReactIcon;
       'layout.footer': LayoutFooter;
       'layout.header': LayoutHeader;
     }

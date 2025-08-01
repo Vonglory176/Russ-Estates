@@ -1,3 +1,5 @@
+import { IconName } from '@/utils/icons';
+
 export interface LinkProps {
     id: number;
     text: string;
@@ -15,6 +17,15 @@ export interface LinkProps {
   export interface LogoProps {
     logoText: string;
     image: ImageProps;
+  }
+
+  // Interface for React-Icon component (includes id for Strapi data)
+  export interface ReactIconProps {
+    id?: number;
+    name: IconName;
+    color?: string;
+    size?: number;
+    className?: string;
   }
 
   export interface FormFieldConfig {
@@ -135,7 +146,7 @@ export interface ServiceCardProps {
   id: number;
   title: string;
   description: string;
-  icon: ImageProps;
+  icon: ReactIconProps;
   link?: LinkProps;
 }
 

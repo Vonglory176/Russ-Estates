@@ -44,9 +44,10 @@ const homePageQuery = qs.stringify({
           populate: {
             services: {
               populate: {
-                icon: {
-                  fields: ["url", "alternativeText"],
-                },
+                // icon: {
+                //   fields: ["url", "alternativeText"],
+                // },
+                icon: true,
                 link: true,
               },
             },

@@ -1,4 +1,4 @@
-import { StrapiImage } from "../StrapiImage";
+import { ReactIcon } from "@/components/elements/ReactIcon";
 import Link from "next/link";
 
 import type { ServicesSectionProps } from "@/types";
@@ -9,16 +9,26 @@ function ServiceCard({ title, description, icon, link }: {
   icon: any;
   link?: any;
 }) {
+  console.log(icon);
   const CardContent = (
     <div className="service-card">
       <div className="service-card__logo">
-        <StrapiImage
+
+        {/* <StrapiImage
           src={icon.url}
           alt={icon.alternativeText || `${title} icon`}
           width={80}
           height={80}
-          className="service-card__logo-img"
-        />
+        /> */}
+          
+        {icon && (
+          <ReactIcon
+            name={icon.name}
+            color={icon.color}
+            size={icon.size || 80}
+            className="service-card__logo-img"
+          />
+        )}
       </div>
       <h3 className="service-card__title h4">{title}</h3>
       <p className="service-card__description">{description}</p>
