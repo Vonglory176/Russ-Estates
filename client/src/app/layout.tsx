@@ -47,3 +47,35 @@ export default async function RootLayout({
     </html>
   );
 }
+
+/*/////// TODO NOTES //////////////////////////////////////////////////////////
+
+GENERAL -------------------------
+
+- Continue Building out Info Section
+  - More CTA (Link to Zillow & "Contact Us" - Brings to section ID)
+  - Add background image option
+  - Add "Highlights" (11+ Years in Business / 20+ Sales / 5 Star Rating)
+
+- Build out Contact Section
+
+- Add Metadata Somehow
+
+- Standarize Font sizes / vars
+- Standardize Colors / vars
+
+- Replace SENJA Widget with custom Zillow Widget
+
+BUGS ----------------------------
+
+- Hero Section Form has weird (transition related?) bug
+  - Scroll out of view, change viewport size, scroll back into view
+
+- Form Validation Controls in Strapi (Required / customErrorMessage / etc.) do not work
+  - Currently disabled (removed from all form fields). To reinstate, re-add "Field Validation Rules" to "Form Field Configuration".
+
+CONCEPTS ------------------------
+
+- Include Map of sold properties? Maybe have tabs between Sold/Listed?
+
+*//////////////////////////////////////////////////////////////////////////////
