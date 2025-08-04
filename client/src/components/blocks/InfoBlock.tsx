@@ -30,12 +30,20 @@ export function InfoBlock({
         <div className="copy">
           <ReactMarkdown>{content}</ReactMarkdown>
         </div>
-        {cta && (
-          <Link href={cta.href} target={cta.isExternal ? "_blank" : "_self"}>
-            <button className={`btn btn--medium btn--${theme}`}>
-              {cta.text}
-            </button>
-          </Link>
+        {cta && cta.length > 0 && (
+          <div className="info__ctas">
+            {cta.map((ctaItem, index) => (
+              <Link 
+                key={ctaItem.id || index} 
+                href={ctaItem.href} 
+                target={ctaItem.isExternal ? "_blank" : "_self"}
+              >
+                <button className={`btn btn--medium btn--${theme}`}>
+                  {ctaItem.text}
+                </button>
+              </Link>
+            ))}
+          </div>
         )}
       </div>
     </section>
