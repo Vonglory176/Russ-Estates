@@ -73,7 +73,8 @@ export interface LinkProps {
     | "blocks.paragraph"
     | "blocks.full-image"
     | "blocks.services-section"
-    | "blocks.senja-widget";
+    | "blocks.senja-widget"
+    | "blocks.form-section";
   
   interface Base<
     T extends ComponentType,
@@ -96,7 +97,8 @@ export interface LinkProps {
     | ParagraphProps
     | FullImageProps
     | ServicesSectionProps
-    | SenjaWidgetProps;
+    | SenjaWidgetProps
+    | FormSectionProps;
   
   export interface HeroSectionProps extends Base<"blocks.hero-section"> {
     theme: "turquoise" | "orange";
@@ -117,7 +119,7 @@ export interface LinkProps {
     headline: string;
     content: string;
     image: ImageProps;
-    cta?: LinkProps;
+    cta?: LinkProps[];
   }
   
   export interface HeadingProps extends Base<"blocks.heading"> {
@@ -151,10 +153,11 @@ export interface ServiceCardProps {
 }
 
 export interface ServicesSectionProps extends Base<"blocks.services-section"> {
-  // theme: "turquoise" | "orange";
+  theme: "turquoise" | "orange";
   heading: string;
   subheading?: string;
   services: ServiceCardProps[];
+  cta?: LinkProps[];
   // columns?: 2 | 3 | 4;
 }
 
@@ -166,4 +169,14 @@ export interface SenjaWidgetProps extends Base<"blocks.senja-widget"> {
   widgetId: string;
   mode?: "shadow" | "inline";
   lazyLoad?: boolean;
+}
+
+export interface FormSectionProps extends Base<"blocks.form-section"> {
+  theme: "turquoise" | "orange";
+  heading: string;
+  subheading?: string;
+  contactForm: ContactFormProps;
+  sideImage?: ImageProps;
+  backgroundImage?: ImageProps;
+  backgroundDarken?: boolean;
 }

@@ -4,6 +4,8 @@ import { HeroSection } from "@/components/blocks/HeroSection";
 import { InfoBlock } from "@/components/blocks/InfoBlock";
 import { ServicesSection } from "@/components/blocks/ServicesSection";
 import { SenjaWidget } from "@/components/blocks/SenjaWidget";
+import { FormSection } from "./blocks/FormSection";
+
 // import { Heading } from "@/components/blocks/Heading";
 // import { ParagraphWithImage } from "@/components/blocks/ParagraphWithImage";
 // import { Paragraph } from "@/components/blocks/Paragraph";
@@ -19,6 +21,8 @@ function blockRenderer(block: Block, index: number) {
       return <ServicesSection {...block} key={index} />;
     case "blocks.senja-widget":
       return <SenjaWidget {...block} key={index} />;
+    case "blocks.form-section":
+      return <FormSection {...block} key={index} />;
     // case "blocks.heading":
     //   return <Heading {...block} key={index} />;
     // case "blocks.paragraph-with-image":

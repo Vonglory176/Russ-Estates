@@ -51,6 +51,7 @@ const homePageQuery = qs.stringify({
                 link: true,
               },
             },
+            cta: true,
           },
         },
         "blocks.senja-widget": {
@@ -64,9 +65,33 @@ const homePageQuery = qs.stringify({
             cta: true,
           },
         },
-        // "blocks.contact-form": {
-        //   populate: true,
-        // },
+        "blocks.form-section": {
+          // populate: true,
+          populate: {
+            contactForm: {
+              populate: {
+                fields: {
+                  populate: {
+                    firstName: true,
+                    lastName: true,
+                    email: true,
+                    phone: true,
+                    company: true,
+                    jobTitle: true,
+                    propertyAddress: true,
+                    message: true,
+                  }
+                }
+              }
+            },
+            sideImage: {
+              fields: ["url", "alternativeText"],
+            },
+            backgroundImage: {
+              fields: ["url", "alternativeText"],
+            },
+          }
+        },
       },
     },
   },

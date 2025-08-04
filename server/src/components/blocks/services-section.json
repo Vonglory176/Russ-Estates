@@ -15,6 +15,17 @@
       "type": "component",
       "component": "blocks.service",
       "repeatable": true
+    },
+    "cta": {
+      "type": "component",
+      "component": "elements.link",
+      "repeatable": true
+    },
+    "theme": {
+      "type": "enumeration",
+      "enum": [
+        "orange"
+      ]
     }
   },
   "config": {}

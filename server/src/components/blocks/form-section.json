@@ -13,8 +13,26 @@
     },
     "contactForm": {
       "type": "component",
-      "component": "elements.hubspot-embed",
+      "component": "elements.contact-form-config",
       "repeatable": false
+    },
+    "sideImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "backgroundImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "backgroundDarken": {
+      "type": "boolean",
+      "default": false
     }
   },
   "config": {}

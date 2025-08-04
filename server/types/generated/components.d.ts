@@ -6,8 +6,15 @@ export interface BlocksFormSection extends Struct.ComponentSchema {
     displayName: 'Form Section';
   };
   attributes: {
-    contactForm: Schema.Attribute.Component<'elements.hubspot-embed', false>;
+    backgroundDarken: Schema.Attribute.Boolean &
+      Schema.Attribute.DefaultTo<false>;
+    backgroundImage: Schema.Attribute.Media<'images'>;
+    contactForm: Schema.Attribute.Component<
+      'elements.contact-form-config',
+      false
+    >;
     heading: Schema.Attribute.String;
+    sideImage: Schema.Attribute.Media<'images'>;
     subheading: Schema.Attribute.String;
   };
 }
@@ -127,9 +134,11 @@ export interface BlocksServicesSection extends Struct.ComponentSchema {
     displayName: 'Services Section';
   };
   attributes: {
+    cta: Schema.Attribute.Component<'elements.link', true>;
     heading: Schema.Attribute.String;
     services: Schema.Attribute.Component<'blocks.service', true>;
     subheading: Schema.Attribute.String;
+    theme: Schema.Attribute.Enumeration<['orange']>;
   };
 }
 
