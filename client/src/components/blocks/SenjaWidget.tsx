@@ -60,9 +60,13 @@ export function SenjaWidget({
   }, [scriptUrl, widgetId, mode, lazyLoad]);
 
   return (
-    <section className="senja-widget">
-      <h2 className="senja-widget__headline">{heading}</h2>
-      <p className="senja-widget__subheading">{subheading}</p>
+    <section className="reviews">
+
+      <div className="reviews__header">
+        <p className="reviews__subheading">{subheading}</p>
+        <h2 className="reviews__heading">{heading}</h2>
+      </div>
+
       <div
         className="senja-embed"
         data-id={widgetId}
