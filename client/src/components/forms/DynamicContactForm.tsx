@@ -306,7 +306,7 @@ export function DynamicContactForm({ config, className = "" }: DynamicContactFor
     <div className={`custom-contact-form custom-contact-form--${theme} ${className}`}>
       {(config.heading || config.description) && (
         <div className="custom-contact-form__header">
-          {config.heading && <h2 className="custom-contact-form__heading">{config.heading}</h2>}
+          {config.heading && <h3 className="custom-contact-form__heading">{config.heading}</h3>}
           {config.description && <p className="custom-contact-form__description">{config.description}</p>}
         </div>
       )}
@@ -343,7 +343,7 @@ export function DynamicContactForm({ config, className = "" }: DynamicContactFor
           disabled={isSubmitting}
           className={`custom-contact-form__submit btn btn--medium btn--${theme}`}
         >
-          {isSubmitting ? 'Sending...' : 'Send Message'}
+          {isSubmitting ? 'Sending...' : 'Get Your Free Estimate'}
         </button>
       </form>
     </div>
