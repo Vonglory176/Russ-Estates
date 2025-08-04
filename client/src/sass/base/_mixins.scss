@@ -7,7 +7,7 @@
 
 $breakpoint argument choices:
 - phone
-- tab-land
+- tablet
 - big-desktop
 
 1em = 16px
@@ -18,7 +18,7 @@ $breakpoint argument choices:
       @content;
     } // 0-900px;
   }
-  @if $breakpoint == tab-land {
+  @if $breakpoint == tablet {
     @media (max-width: 74.99em) {
       @content;
     } // 900px-1200px;

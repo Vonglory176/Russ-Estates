@@ -5,7 +5,7 @@
   align-items: center;
   padding: 2rem 4.8rem;
   z-index: 100;
-  background-color: $light-beige;
+  // background-color: $light-beige;
   max-width: 140rem;
   margin: 0 auto;
   
@@ -183,7 +183,7 @@
 }
 
 // Responsive adjustments
-@include respond(tab-land) {
+@include respond(tablet) {
   .header {
     padding: 2rem 3rem;
   }

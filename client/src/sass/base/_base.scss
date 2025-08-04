@@ -20,14 +20,15 @@ section {
   margin: 8rem auto;
   padding: 0 2rem;
   max-width: 140rem;
-}
+  
+  // @include respond(phone) {
+  //   margin: 4rem auto;
+  // }
 
-// REMOVE LATER
-// .senja-embed {
-//   // display: none !important;
-//   max-height: 451px;
-//   overflow: hidden;
-// }
+  // &:not(:last-child) {
+  //   border-bottom: 1px solid #000;
+  // }
+}
 
 a {
   color: inherit;
@@ -60,7 +61,7 @@ html {
 
   font-size: 62.5%; // 1rem = 10px; 10px/16px = 62.5%
 
-  @include respond(tab-land) {
+  @include respond(tablet) {
     // width < 900?
     font-size: 55%; // 1 rem = 9px, 9/16 = 56.25%
   }
