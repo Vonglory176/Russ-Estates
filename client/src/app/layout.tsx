@@ -50,12 +50,22 @@ export default async function RootLayout({
 
 /*/////// TODO NOTES //////////////////////////////////////////////////////////
 
+KEEP IN MIND -------------------------
+
+- Headline
+  - Heading
+  - Subheading
+
+
 GENERAL -------------------------
 
 - Continue Building out Info Section
   - More CTA (Link to Zillow & "Contact Us" - Brings to section ID)
   - Add background image option
   - Add "Highlights" (11+ Years in Business / 20+ Sales / 5 Star Rating)
+  - Flush out "Theme" options
+
+- Add "Aligntment" options to Services Section
 
 - Build out Contact Section
 
@@ -66,6 +76,10 @@ GENERAL -------------------------
 
 - Replace SENJA Widget with custom Zillow Widget
 
+- Really need to clean up "ContactForm / FormSection" naming conventions, it's a mess
+  - BackgroundDarken is not hooked up to anything
+
+
 BUGS ----------------------------
 
 - Hero Section Form has weird (transition related?) bug
@@ -74,8 +88,11 @@ BUGS ----------------------------
 - Form Validation Controls in Strapi (Required / customErrorMessage / etc.) do not work
   - Currently disabled (removed from all form fields). To reinstate, re-add "Field Validation Rules" to "Form Field Configuration".
 
+
 CONCEPTS ------------------------
 
 - Include Map of sold properties? Maybe have tabs between Sold/Listed?
+  - (ALREADY SOMETHING SIMILAR ON ZILLOW PAGE !!!!) - Cannibalize API?
+
 
 *//////////////////////////////////////////////////////////////////////////////
