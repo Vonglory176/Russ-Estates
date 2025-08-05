@@ -55,8 +55,14 @@
     }
   }
 
-  & .btn {
-    margin-top: 3rem;
-    width: 100%;
+  
+  &__ctas {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    .btn {
+      width: 100%;
+    }
   }
 }
