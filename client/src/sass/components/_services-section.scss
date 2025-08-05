@@ -28,7 +28,7 @@
   &__grid {
     display: grid;
     gap: 3rem; // column-gap: 3rem;
-    max-width: 120rem;
+    // max-width: 120rem;
     margin: 0 auto;
     // padding: 0 2rem;
 
@@ -53,6 +53,7 @@
 
 .service-card {
   background: $white;
+  border: 1px solid hsla(0, 0%, 90%, 1);
   border-radius: 2rem;
   padding: 3rem 2rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
