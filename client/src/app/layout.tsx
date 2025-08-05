@@ -59,26 +59,33 @@ KEEP IN MIND -------------------------
 
 GENERAL -------------------------
 
-- Continue Building out Info Section
-  - More CTA (Link to Zillow & "Contact Us" - Brings to section ID)
-  - Add background image option
-  - Add "Highlights" (11+ Years in Business / 20+ Sales / 5 Star Rating)
-  - Flush out "Theme" options
+  Before Deployment ////////////////////////////////////
 
-- Add "Aligntment" options to Services Section
+  - Figure out what to do with NavBar
+    - Hook section-ID into links somehow
 
-- Build out Contact Section
+  - Continue Building out Info / Services Section
+    - Add background image option
+    - Add "Highlights" (11+ Years in Business / 20+ Sales / 5 Star Rating)
+    - Flush out "Theme" options
 
-- Add Metadata Somehow
 
-- Standarize Font sizes / vars
-- Standardize Colors / vars
+  - Add Metadata Somehow
 
-- Replace SENJA Widget with custom Zillow Widget
+  
+  After Deployment /////////////////////////////////////
 
-- Really need to clean up "ContactForm / FormSection" naming conventions, it's a mess
+  - Standardize Colors / vars
+  - Standarize Font sizes / vars (Kind of done)
+
+  - Replace SENJA Widget with custom Zillow Widget
+
+  - Really need to clean up "ContactForm / FormSection" naming conventions, it's a mess
   - BackgroundDarken is not hooked up to anything
 
+  - Add "Aligntment" options to Services Section
+
+  - Replicate the GForm mechanics of "Property Address" automatically breaking into multiple fields (Check competitor sites for examples)
 
 BUGS ----------------------------
 
