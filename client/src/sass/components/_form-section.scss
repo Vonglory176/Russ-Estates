@@ -81,6 +81,7 @@
         right: 0;
         // width: 50%;
         // height: 100%;
+        min-height: 130%;
         z-index: -1;
         object-fit: cover;
         object-position: center; // center bottom
@@ -89,6 +90,7 @@
         @include respond(phone) {
             //   display: none;
             height: 100%;
+            min-height: 100%;
             max-width: 100%;
             left: 50%;
             transform: translateX(-50%);
