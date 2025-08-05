@@ -8,43 +8,37 @@
   "attributes": {
     "heading": {
       "type": "string",
-      "default": "Get in Touch",
-      "description": "Form heading displayed above the form"
+      "default": "Get in Touch"
     },
     "description": {
       "type": "text",
-      "default": "Ready to start your project? Let's discuss how we can help bring your vision to life.",
-      "description": "Form description displayed below the heading"
+      "default": "Ready to start your project? Let's discuss how we can help bring your vision to life."
     },
     "theme": {
       "type": "enumeration",
+      "default": "turquoise",
       "enum": [
         "turquoise",
-        "orange"
-      ],
-      "default": "turquoise",
-      "description": "Color theme for the form styling"
+        "orange",
+        "black"
+      ]
     },
     "fields": {
       "type": "component",
       "component": "elements.form-fields",
-      "repeatable": false,
-      "description": "Configure which fields to show and their properties"
+      "repeatable": false
     },
     "hubspotFormId": {
       "type": "string",
-      "required": false,
-      "description": "HubSpot Form ID (optional - can use environment variables instead)"
+      "required": false
     },
     "hubspotPortalId": {
       "type": "string",
-      "required": false,
-      "description": "HubSpot Portal ID (optional - can use environment variables instead)"
+      "required": false
     },
     "useDefaultFieldConfig": {
       "type": "boolean",
-      "default": true,
-      "description": "Use sensible default field configuration for real estate contact forms"
+      "default": true
     }
   }
 }

@@ -158,6 +158,8 @@ export interface ServicesSectionProps extends Base<"blocks.services-section"> {
   subheading?: string;
   services: ServiceCardProps[];
   cta?: LinkProps[];
+  backgroundImage?: ImageProps;
+  backgroundOverlay?: "darken" | "lighten";
   // columns?: 2 | 3 | 4;
 }
 
@@ -178,5 +180,5 @@ export interface FormSectionProps extends Base<"blocks.form-section"> {
   contactForm: ContactFormProps;
   sideImage?: ImageProps;
   backgroundImage?: ImageProps;
-  backgroundDarken?: boolean;
+  backgroundOverlay?: "darken" | "lighten";
 }

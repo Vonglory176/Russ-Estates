@@ -26,6 +26,20 @@
       "enum": [
         "orange"
       ]
+    },
+    "backgroundImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "backgroundOverlay": {
+      "type": "enumeration",
+      "enum": [
+        "darken",
+        "lighten"
+      ]
     }
   },
   "config": {}

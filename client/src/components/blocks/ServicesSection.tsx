@@ -2,6 +2,7 @@ import { ReactIcon } from "@/components/elements/ReactIcon";
 import Link from "next/link";
 
 import type { ServicesSectionProps } from "@/types";
+import { StrapiImage } from "../StrapiImage";
 
 function ServiceCard({
   title,
@@ -61,46 +62,70 @@ export function ServicesSection({
   subheading,
   services,
   cta,
+  backgroundImage,
+  backgroundOverlay,
 }: // columns = 3,
 Readonly<ServicesSectionProps>) {
   const columns = 3;
 
   return (
     <section className={`services services--${theme}`}>
-      <div className="services__header">
-        {subheading && <p className="services__subheading">{subheading}</p>}
-        <h2 className={`services__heading services__heading--${theme}`}>
-          {heading}
-        </h2>
-      </div>
 
-      <div className={`services__grid services__grid--${columns}-cols`}>
-        {services.map((service) => (
-          <ServiceCard
-            key={service.id}
-            title={service.title}
-            description={service.description}
-            icon={service.icon}
-            link={service.link}
+      {/* Background Image */}
+      {backgroundImage && (
+        <div className="services__background">
+          <StrapiImage
+            src={backgroundImage.url}
+            alt={backgroundImage.alternativeText || "No alternative text provided"}
+            className="services__background-image"
+            width={1920}
+            height={1080}
           />
-        ))}
-      </div>
+          {backgroundOverlay && <div className={`services__background__overlay services__background__overlay--${backgroundOverlay}`}></div>}
+        </div>
+      )}
 
-      {cta && cta.length > 0 && (
-          <div className="services__ctas">
-            {cta.map((ctaItem, index) => (
-              <Link 
-                key={ctaItem.id || index} 
-                href={ctaItem.href} 
-                target={ctaItem.isExternal ? "_blank" : "_self"}
-              >
-                <button className={`btn btn--medium btn--${theme}`}>
-                  {ctaItem.text}
-                </button>
-              </Link>
-            ))}
-          </div>
-        )}
+      <div className="services__container section__wrapper">
+
+        {/* Header */}
+        <div className="services__header">
+          {subheading && <p className="services__subheading">{subheading}</p>}
+          <h2 className={`services__heading services__heading--${theme}`}>
+            {heading}
+          </h2>
+        </div>
+
+        {/* Services */}
+        <div className={`services__grid services__grid--${columns}-cols`}>
+          {services.map((service) => (
+            <ServiceCard
+              key={service.id}
+              title={service.title}
+              description={service.description}
+              icon={service.icon}
+              link={service.link}
+            />
+          ))}
+        </div>
+
+        {/* CTA */}
+        {cta && cta.length > 0 && (
+            <div className="services__ctas">
+              {cta.map((ctaItem, index) => (
+                <Link 
+                  key={ctaItem.id || index} 
+                  href={ctaItem.href} 
+                  target={ctaItem.isExternal ? "_blank" : "_self"}
+                >
+                  <button className={`btn btn--medium btn--${theme}`}>
+                    {ctaItem.text}
+                  </button>
+                </Link>
+              ))}
+            </div>
+          )}
+      </div>
+      
     </section>
   );
 }

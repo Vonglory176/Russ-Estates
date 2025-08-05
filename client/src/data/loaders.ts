@@ -42,6 +42,9 @@ const homePageQuery = qs.stringify({
         },
         "blocks.services-section": {
           populate: {
+            backgroundImage: {
+              fields: ["url", "alternativeText"],
+            },
             services: {
               populate: {
                 // icon: {

@@ -134,6 +134,8 @@ export interface BlocksServicesSection extends Struct.ComponentSchema {
     displayName: 'Services Section';
   };
   attributes: {
+    backgroundImage: Schema.Attribute.Media<'images'>;
+    backgroundOverlay: Schema.Attribute.Enumeration<['darken', 'lighten']>;
     cta: Schema.Attribute.Component<'elements.link', true>;
     heading: Schema.Attribute.String;
     services: Schema.Attribute.Component<'blocks.service', true>;
@@ -156,7 +158,7 @@ export interface ElementsContactFormConfig extends Struct.ComponentSchema {
       Schema.Attribute.DefaultTo<'Get in Touch'>;
     hubspotFormId: Schema.Attribute.String;
     hubspotPortalId: Schema.Attribute.String;
-    theme: Schema.Attribute.Enumeration<['turquoise', 'orange']> &
+    theme: Schema.Attribute.Enumeration<['turquoise', 'orange', 'black']> &
       Schema.Attribute.DefaultTo<'turquoise'>;
     useDefaultFieldConfig: Schema.Attribute.Boolean &
       Schema.Attribute.DefaultTo<true>;

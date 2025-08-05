@@ -17,9 +17,14 @@ main {
 }
 
 section {
-  margin: 8rem auto;
-  padding: 0 2rem;
-  max-width: 140rem;
+  // margin: 8rem 0;
+  // padding: 0 2rem;
+  padding: 4rem 2rem;
+  
+  .section__wrapper {
+    max-width: 140rem;
+    margin: 0 auto;
+  }
   
   // @include respond(phone) {
   //   margin: 4rem auto;
@@ -71,9 +76,9 @@ html {
     font-size: 50%; // 1 rem = 8px, 8/16 = 50%
   }
 
-  @include respond(big-desktop) {
-    font-size: 75%; // 1 rem = 12px, 12/16 = 75%
-  }
+  // @include respond(big-desktop) {
+  //   font-size: 75%; // 1 rem = 12px, 12/16 = 75%
+  // }
 }
 
 .bold {

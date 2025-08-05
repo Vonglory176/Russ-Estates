@@ -1,19 +1,23 @@
 .hero {
-  position: relative;
-  display: grid;
-  grid-template-columns: 1fr;
-  // flex-direction: column;
-  // align-items: center;
-  gap: 2rem;
-  width: calc(100% - 4rem);
-  // min-height: 83rem;
-  padding: 6rem 2rem 10rem; // 8rem 4rem; // 22rem 4.8rem 0;
-  margin-top: 0rem;
-  margin-bottom: 8rem;
+  padding-top: 0px;
 
-  @include respond(desktop) {
-    padding: 8rem 4rem 10rem; // 22rem 4.8rem 0;
-    grid-template-columns: 1fr 1fr;
+  &__container {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    // flex-direction: column;
+    // align-items: center;
+    gap: 2rem;
+    // width: calc(100% - 4rem);
+    // min-height: 83rem;
+    padding: 6rem 2rem 10rem; // 8rem 4rem; // 22rem 4.8rem 0;
+    // margin-top: 0rem;
+    margin-bottom: 8rem;
+
+    @include respond(desktop) {
+      padding: 8rem 4rem 10rem; // 22rem 4.8rem 0;
+      grid-template-columns: 1fr 1fr;
+    }
   }
 
   // margin-bottom: 12.5rem;

@@ -60,20 +60,22 @@ export function SenjaWidget({
   }, [scriptUrl, widgetId, mode, lazyLoad]);
 
   return (
-    <section className="reviews">
+    <section id="reviews">
+      <div className="reviews section__wrapper">
 
-      <div className="reviews__header">
-        <p className="reviews__subheading">{subheading}</p>
-        <h2 className="reviews__heading">{heading}</h2>
+        <div className="reviews__header">
+          <h2 className="reviews__heading">{heading}</h2>
+          <p className="reviews__subheading">{subheading}</p>
+        </div>
+
+        <div
+          className="senja-embed"
+          data-id={widgetId}
+          data-mode={mode}
+          data-lazyload={lazyLoad.toString()}
+          style={{ display: "block", width: "100%" }}
+        />
       </div>
-
-      <div
-        className="senja-embed"
-        data-id={widgetId}
-        data-mode={mode}
-        data-lazyload={lazyLoad.toString()}
-        style={{ display: "block", width: "100%" }}
-      />
     </section>
   );
 }
