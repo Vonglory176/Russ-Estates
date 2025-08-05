@@ -34,3 +34,28 @@ $breakpoint argument choices:
     } // 1800px
   }
 }
+
+@mixin fade-in-out($duration: 5s, $fade-in-duration: 0.5s, $fade-out-duration: 0.5s) {
+  opacity: 0;
+  animation: fadeInOut #{$duration} ease-in-out forwards;
+  pointer-events: auto;
+
+  @keyframes fadeInOut {
+    0% {
+      opacity: 0;
+      pointer-events: auto;
+    }
+    10% {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    80% {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    100% {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+}
