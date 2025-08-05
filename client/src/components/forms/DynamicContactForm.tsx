@@ -320,6 +320,7 @@ export function DynamicContactForm({ config, className = "" }: DynamicContactFor
 
       {submitStatus === 'error' && (
         <div className="custom-contact-form__error">
+          <h3>Oops!</h3>
           <p>Sorry, there was an error submitting your form. Please try again.</p>
         </div>
       )}
