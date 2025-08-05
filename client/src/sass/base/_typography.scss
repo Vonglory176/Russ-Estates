@@ -7,8 +7,11 @@
 //   font-family: "DM Serif Display", serif;
 // }
 
-p {
+* {
   font-size: 2rem;
+}
+
+p, span, label {
   line-height: 3rem;
 }
 
