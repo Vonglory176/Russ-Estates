@@ -61,19 +61,25 @@ GENERAL -------------------------
 
   Before Deployment ////////////////////////////////////
 
+  - Fix up Nav-Menu in Mobile (Modal can only be close by X)
+
   - Figure out what to do with NavBar
     - Hook section-ID into links somehow
 
-  - Continue Building out Info / Services Section
+  - Info Section
     - Add background image option
     - Add "Highlights" (11+ Years in Business / 20+ Sales / 5 Star Rating)
-    - Flush out "Theme" options
 
+  - Services / Info Sections
+    - Flush out "Theme" options
 
   - Add Metadata Somehow
 
   
   After Deployment /////////////////////////////////////
+
+  - Make Navbar Sticky (Including 'active' link use via intersection-observer)
+    - Include disappearing bar when scrolling down?
 
   - Standardize Colors / vars
   - Standarize Font sizes / vars (Kind of done)
