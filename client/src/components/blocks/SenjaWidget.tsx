@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import type { SenjaWidgetProps } from "@/types";
 
 export function SenjaWidget({
+  sectionId,
   heading,
   subheading,
   widgetUrl,
@@ -60,7 +61,7 @@ export function SenjaWidget({
   }, [scriptUrl, widgetId, mode, lazyLoad]);
 
   return (
-    <section id="reviews">
+    <section id={sectionId}>
       <div className="reviews section__wrapper">
 
         <div className="reviews__header">

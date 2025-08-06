@@ -14,6 +14,7 @@ export interface BlocksFormSection extends Struct.ComponentSchema {
       false
     >;
     heading: Schema.Attribute.String;
+    sectionId: Schema.Attribute.String;
     sideImage: Schema.Attribute.Media<'images'>;
     subheading: Schema.Attribute.String;
   };
@@ -56,6 +57,7 @@ export interface BlocksHeroSection extends Struct.ComponentSchema {
     heading: Schema.Attribute.String;
     image: Schema.Attribute.Media<'images'>;
     logo: Schema.Attribute.Component<'elements.logo', false>;
+    sectionId: Schema.Attribute.String;
     subheading: Schema.Attribute.String;
     theme: Schema.Attribute.Enumeration<['turquoise', 'orange']>;
   };
@@ -72,6 +74,7 @@ export interface BlocksInfoBlock extends Struct.ComponentSchema {
     headline: Schema.Attribute.String;
     image: Schema.Attribute.Media<'images'>;
     reversed: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    sectionId: Schema.Attribute.String;
     theme: Schema.Attribute.Enumeration<['turquoise', 'orange']>;
   };
 }
@@ -109,6 +112,7 @@ export interface BlocksSenjaWidget extends Struct.ComponentSchema {
     lazyLoad: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     mode: Schema.Attribute.Enumeration<['shadow', 'inline']> &
       Schema.Attribute.DefaultTo<'shadow'>;
+    sectionId: Schema.Attribute.String;
     subheading: Schema.Attribute.String;
     widgetId: Schema.Attribute.String & Schema.Attribute.Required;
     widgetUrl: Schema.Attribute.String & Schema.Attribute.Required;
@@ -138,6 +142,7 @@ export interface BlocksServicesSection extends Struct.ComponentSchema {
     backgroundOverlay: Schema.Attribute.Enumeration<['darken', 'lighten']>;
     cta: Schema.Attribute.Component<'elements.link', true>;
     heading: Schema.Attribute.String;
+    sectionId: Schema.Attribute.String;
     services: Schema.Attribute.Component<'blocks.service', true>;
     subheading: Schema.Attribute.String;
     theme: Schema.Attribute.Enumeration<['orange']>;

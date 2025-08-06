@@ -5,6 +5,9 @@
   },
   "options": {},
   "attributes": {
+    "sectionId": {
+      "type": "string"
+    },
     "reversed": {
       "type": "boolean",
       "default": false

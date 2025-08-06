@@ -57,6 +57,7 @@ function ServiceCard({
 }
 
 export function ServicesSection({
+  sectionId,
   theme,
   heading,
   subheading,
@@ -69,7 +70,7 @@ Readonly<ServicesSectionProps>) {
   const columns = 3;
 
   return (
-    <section className={`services services--${theme}`}>
+    <section className={`services services--${theme}`} id={sectionId}>
 
       {/* Background Image */}
       {backgroundImage && (

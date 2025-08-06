@@ -4,6 +4,7 @@ import { DynamicContactForm } from "../forms/DynamicContactForm";
 import type { HeroSectionProps } from "@/types";
 
 export function HeroSection({
+  sectionId,
   theme,
   heading,
   subheading,
@@ -17,7 +18,7 @@ export function HeroSection({
   contactForm,
 }: Readonly<HeroSectionProps>) {
   return (
-    <section className={`hero hero--${theme}`} id="hero">
+    <section className={`hero hero--${theme}`} id={sectionId}>
       <div className="hero__container section__wrapper">
         {/* Background Image */}
         <div className="hero__background">

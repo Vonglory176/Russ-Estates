@@ -3,6 +3,7 @@ import type { FormSectionProps } from "@/types";
 import { StrapiImage } from "../StrapiImage";
 
 export function FormSection({
+  sectionId,
   theme,
   sideImage,
   backgroundImage,
@@ -12,7 +13,7 @@ export function FormSection({
   contactForm,
 }: Readonly<FormSectionProps>) {
   return (
-    <section className={`form form--${theme}`} id="contact-form">
+    <section className={`form form--${theme}`} id={sectionId}>
 
         {heading && <div className="form__header">
           <h2 className={`form__heading form__heading--${theme}`}>{heading}</h2>
