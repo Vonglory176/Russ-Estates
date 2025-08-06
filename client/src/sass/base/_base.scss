@@ -17,9 +17,18 @@ main {
 }
 
 section {
+
+  // Hash-Link Scroll Offset
+  scroll-margin-top: 76px;
+
+  @include respond(desktop) {
+    scroll-margin-top: 95px;
+  }
+
   // margin: 8rem 0;
   // padding: 0 2rem;
   padding: 4rem 2rem;
+
   
   .section__wrapper {
     max-width: 140rem;
