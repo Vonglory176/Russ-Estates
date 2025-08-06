@@ -15,7 +15,6 @@ function ServiceCard({
   icon: any;
   link?: any;
 }) {
-  console.log(icon);
   const CardContent = (
     <div className="service-card">
       {icon && (

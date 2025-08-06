@@ -64,14 +64,12 @@ export interface LinkProps {
   }
   
   type ComponentType =
-    | "blocks.hero-section"
-    | "blocks.info-block"
-    | "blocks.featured-article"
-    | "blocks.subscribe"
     | "blocks.heading"
     | "blocks.paragraph-with-image"
     | "blocks.paragraph"
     | "blocks.full-image"
+    | "blocks.hero-section"
+    | "blocks.info-block"
     | "blocks.services-section"
     | "blocks.senja-widget"
     | "blocks.form-section";
@@ -90,37 +88,15 @@ export interface LinkProps {
   }
   
   export type Block =
-    | HeroSectionProps
-    | InfoBlockProps
     | HeadingProps
     | ParagraphWithImageProps
     | ParagraphProps
     | FullImageProps
+    | HeroSectionProps
+    | InfoBlockProps
     | ServicesSectionProps
     | SenjaWidgetProps
     | FormSectionProps;
-
-  export interface HeadingProps extends Base<"blocks.heading"> {
-    heading: string;
-    linkId?: string;
-  }
-  
-  export interface ParagraphWithImageProps extends Base<"blocks.paragraph-with-image"> {
-    content: string;
-    image: ImageProps;
-    reversed?: boolean;
-    imageLandscape?: boolean;
-  }
-  
-  export interface ParagraphProps extends Base<"blocks.paragraph"> {
-    content: string;
-  }
-  
-  export interface FullImageProps extends Base<"blocks.full-image"> {
-    id: number;
-    __component: "blocks.full-image";
-    image: ImageProps;
-  }
   
   export interface HeroSectionProps extends Base<"blocks.hero-section"> {
     sectionId?: string;
@@ -145,45 +121,71 @@ export interface LinkProps {
     image: ImageProps;
     cta?: LinkProps[];
   }
-
-  export interface ServiceCardProps {
+  
+  export interface HeadingProps extends Base<"blocks.heading"> {
+    sectionId?: string;
+    heading: string;
+    linkId?: string;
+  }
+  
+  export interface ParagraphWithImageProps extends Base<"blocks.paragraph-with-image"> {
+    sectionId?: string;
+    content: string;
+    image: ImageProps;
+    reversed?: boolean;
+    imageLandscape?: boolean;
+  }
+  
+  export interface ParagraphProps extends Base<"blocks.paragraph"> {
+    sectionId?: string;
+    content: string;
+  }
+  
+  export interface FullImageProps extends Base<"blocks.full-image"> {
     id: number;
-    title: string;
-    description: string;
-    icon: ReactIconProps;
-    link?: LinkProps;
+    __component: "blocks.full-image";
+    sectionId?: string;
+    image: ImageProps;
   }
 
-  export interface ServicesSectionProps extends Base<"blocks.services-section"> {
-    sectionId?: string;
-    theme: "turquoise" | "orange";
-    heading: string;
-    subheading?: string;
-    services: ServiceCardProps[];
-    cta?: LinkProps[];
-    backgroundImage?: ImageProps;
-    backgroundOverlay?: "darken" | "lighten";
-    // columns?: 2 | 3 | 4;
-  }
+export interface ServiceCardProps {
+  id: number;
+  title: string;
+  description: string;
+  icon: ReactIconProps;
+  link?: LinkProps;
+}
 
-  // For Senja Reviews Widget
-  export interface SenjaWidgetProps extends Base<"blocks.senja-widget"> {
-    sectionId?: string;
-    heading: string;
-    subheading: string;
-    widgetUrl: string;
-    widgetId: string;
-    mode?: "shadow" | "inline";
-    lazyLoad?: boolean;
-  }
+export interface ServicesSectionProps extends Base<"blocks.services-section"> {
+  sectionId?: string;
+  theme: "turquoise" | "orange";
+  heading: string;
+  subheading?: string;
+  services: ServiceCardProps[];
+  cta?: LinkProps[];
+  backgroundImage?: ImageProps;
+  backgroundOverlay?: "darken" | "lighten";
+  // columns?: 2 | 3 | 4;
+}
 
-  export interface FormSectionProps extends Base<"blocks.form-section"> {
-    sectionId?: string;
-    theme: "turquoise" | "orange";
-    heading: string;
-    subheading?: string;
-    contactForm: ContactFormProps;
-    sideImage?: ImageProps;
-    backgroundImage?: ImageProps;
-    backgroundOverlay?: "darken" | "lighten";
-  }
+// For Senja Reviews Widget
+export interface SenjaWidgetProps extends Base<"blocks.senja-widget"> {
+  sectionId?: string;
+  heading: string;
+  subheading: string;
+  widgetUrl: string;
+  widgetId: string;
+  mode?: "shadow" | "inline";
+  lazyLoad?: boolean;
+}
+
+export interface FormSectionProps extends Base<"blocks.form-section"> {
+  sectionId?: string;
+  theme: "turquoise" | "orange";
+  heading: string;
+  subheading?: string;
+  contactForm: ContactFormProps;
+  sideImage?: ImageProps;
+  backgroundImage?: ImageProps;
+  backgroundOverlay?: "darken" | "lighten";
+}

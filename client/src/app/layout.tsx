@@ -61,7 +61,12 @@ GENERAL -------------------------
 
   Before Deployment ////////////////////////////////////
 
-  - Fix up Nav-Menu in Mobile (Modal can only be close by X)
+  - Add Metadata Somehow  
+  
+  
+  After Deployment /////////////////////////////////////
+
+  - Swap out Hubspot for "InvestorFuse"
 
   - Info Section
     - Add background image option
@@ -70,15 +75,9 @@ GENERAL -------------------------
   - Services / Info Sections
     - Flush out "Theme" options
 
-  - Add Metadata Somehow
+  - Probably want to move code (like body-overflow) into context provider
 
-  - Swap out Hubspot for "InvestorFuse"
-
-  
-  After Deployment /////////////////////////////////////
-
-  - Make Navbar Sticky (Including 'active' link use via intersection-observer)
-    - Include disappearing bar when scrolling down?
+  - Make Navbar disapear when scrolling down, and reappear when scrolling up?
 
   - Standardize Colors / vars
   - Standarize Font sizes / vars (Kind of done)
