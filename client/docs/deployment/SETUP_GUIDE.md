@@ -80,7 +80,7 @@ NODE_ENV=development
 
 **Preview Environment:**
 - Environment: Preview
-- Branch: (leave empty)
+- Branch: `staging`
 - Variables:
   ```
   STRAPI_API_URL=https://your-project-staging.strapi.cloud

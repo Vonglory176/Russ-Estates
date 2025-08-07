@@ -13,10 +13,7 @@
     "strapi": "strapi",
     "upgrade": "npx @strapi/upgrade latest",
     "upgrade:dry": "npx @strapi/upgrade latest --dry",
-    "transfer:to-staging": "strapi transfer --to https://heroic-champion-786a121493.strapiapp.com/ --token 14a65f62a974dd0d577d2696c04c1260166d3aea9107fae2dafe354795e89882d55405d6609f6aeebf6247b83537c93f56b8f7f2d411c3086b490d281b5a58fea419cba0717e23bcf7abe6b52caee4a8af5ecdf9d135f7b877241fd1893af82be78dd38443fb43a5adfb225a0cd2190f4a69c43e9e06ffcb02fdf97ba427c5b3",
-    "transfer:from-staging": "strapi transfer --from https://heroic-champion-786a121493.strapiapp.com/ --token 6c3022232a95cd0330109d469458fabee17093ba4b33afead353ee1a80f137a33099efb9fb107a22b0e882e44cc8af69ee81692f1c98f829c531358aecdf1b6ccd91c093b60ac151d225e39810cc4a97784881e10d4772fc187341b860efc0c59f6e330b6c514f401db1a468969f83fe787375267cdbea69502a8ce89630f921",
-    "transfer:to-production": "strapi transfer --to https://amazing-courage-61f53eefbb.strapiapp.com/ --token d398587aeca0b1c1af33ecffcef41d41d90401ba2790ca69fad75fd958d87ad475c9d4b43416d2905d912740ae7e90118d31d4fa12ef76222c449a8a258909f94435d7d835d76d8c6366780e3314ae35d1b722d099b35f2df23255d3a7b8f1cf63271da1ef7c39f1039afdfd34cdfc29dc3bf050d06c12b3e1a5ec1cd41250fd",
-    "transfer:from-production": "strapi transfer --from https://amazing-courage-61f53eefbb.strapiapp.com/ --token 169ec0cc2471bb28c360f9deee8fadf9cbe52258140e672c276f5f340a84b936df01f0f0739c4585064b97d0aa592ba0d7c15cb952fd04b1f360f92258bd0c1d762a12819611326e915e5702257292b4843c61cbf0915032f70a48750091a3e3654b3589f484f0982396cbed22465c262c40397a49104632f65a2a8fa120dfa4"
+    "transfer:to-production": "strapi transfer -- --to https://amazing-courage-61f53eefbb.strapiapp.com/admin"
   },
   "dependencies": {
     "@strapi/plugin-cloud": "5.18.0",

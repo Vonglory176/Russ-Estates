@@ -24,6 +24,8 @@ export default async function HomeRoute() {
   const data = await loader();
   const blocks = data?.blocks || [];
   console.log(blocks);
+  console.log(process.env.NEXT_STRAPI_API_URL);
+  console.log(process.env.STRAPI_API_URL);
   return (
     <div>      
       <BlockRenderer blocks={blocks} />
