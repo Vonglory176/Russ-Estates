@@ -56,7 +56,7 @@ GENERAL -------------------------
 
   Before Deployment ////////////////////////////////////
 
-  - Add Metadata Somehow  
+  - Deploy & figure out how best way to transfer data between production / local
   
   
   After Deployment /////////////////////////////////////
