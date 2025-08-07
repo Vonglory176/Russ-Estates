@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 async function loader(slug: string) {
   const { data } = await getPageBySlug(slug);
-  if (data.length === 0) notFound();
+  if (!data || data.length === 0) notFound();
   return { blocks: data[0]?.blocks };
 }
 

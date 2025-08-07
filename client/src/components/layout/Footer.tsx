@@ -4,12 +4,12 @@ import Link from "next/link";
 import { StrapiImage } from "../StrapiImage";
 
 interface FooterProps {
-  data: {
+  data?: {
     logo: LogoProps;
     navigation: LinkProps[];
     policies: LinkProps[];
     copy: string;
-  };
+  } | null;
 }
 
 export function Footer({ data }: FooterProps) {

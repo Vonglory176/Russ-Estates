@@ -12,30 +12,17 @@ export function SenjaWidget({
   mode = "shadow",
   lazyLoad = false,
 }: Readonly<SenjaWidgetProps>) {
-  // Validate required props
-  if (!widgetUrl || !widgetId) {
-    return (
-      <div
-        style={{
-          padding: "20px",
-          border: "2px solid red",
-          backgroundColor: "#ffe6e6",
-        }}
-      >
-        <h3>Senja Widget Error</h3>
-        <p>Missing required props: widgetUrl or widgetId</p>
-      </div>
-    );
-  }
-
   // Ensure the URL ends with /platform.js
-  const scriptUrl = widgetUrl.endsWith("/platform.js")
+  const scriptUrl = widgetUrl?.endsWith("/platform.js")
     ? widgetUrl
     : `${widgetUrl}/platform.js`;
 
   useEffect(() => {
     // Check if we're on the client side
     if (typeof window === "undefined") return;
+
+    // Check if required props are missing
+    if (!widgetUrl || !widgetId) return;
 
     // Check if script is already loaded
     const existingScript = document.querySelector(`script[src="${scriptUrl}"]`);
@@ -58,7 +45,23 @@ export function SenjaWidget({
         document.head.removeChild(scriptToRemove);
       }
     };
-  }, [scriptUrl, widgetId, mode, lazyLoad]);
+  }, [scriptUrl, widgetId, mode, lazyLoad, widgetUrl]);
+
+  // Validate required props
+  if (!widgetUrl || !widgetId) {
+    return (
+      <div
+        style={{
+          padding: "20px",
+          border: "2px solid red",
+          backgroundColor: "#ffe6e6",
+        }}
+      >
+        <h3>Senja Widget Error</h3>
+        <p>Missing required props: widgetUrl or widgetId</p>
+      </div>
+    );
+  }
 
   return (
     <section id={sectionId}>

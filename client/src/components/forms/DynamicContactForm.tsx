@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import { fetchAPI } from '@/utils/fetch-api';
-import { CustomContactForm } from './CustomContactForm';
 import type { ContactFormProps } from '@/types';
 
 interface FormFieldConfig {
@@ -114,25 +113,13 @@ const defaultFieldConfigs: Record<string, FormFieldConfig> = {
 };
 
 export function DynamicContactForm({ config, className = "" }: DynamicContactFormProps) {
-  // If no config is provided, fall back to the static form
-  if (!config || !config.fields) {
-    return (
-      <CustomContactForm 
-        heading={config?.heading || "Get in Touch"}
-        description={config?.description || "Ready to start your project? Let's discuss how we can help bring your vision to life."}
-        theme={config?.theme || "turquoise"}
-        className={className}
-      />
-    );
-  }
-
-  // Check if we should use default field configuration
-  const useDefaultConfig = config.useDefaultFieldConfig !== false;
-
   const [formData, setFormData] = useState<FormData>({});
   const [errors, setErrors] = useState<FormErrors>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
+  // Check if we should use default field configuration
+  const useDefaultConfig = config.useDefaultFieldConfig !== false; // REMOVE THIS AND RELATED CODE
 
   // Merge config with defaults
   const mergedFields = Object.keys(defaultFieldConfigs).reduce((acc, fieldName) => {
@@ -314,7 +301,7 @@ export function DynamicContactForm({ config, className = "" }: DynamicContactFor
       {submitStatus === 'success' && (
         <div className="custom-contact-form__success">
           <h3>Thank you!</h3>
-          <p>Your message has been sent successfully. We'll get back to you soon.</p>
+          <p>Your message has been sent successfully. We&apos;ll get back to you soon.</p>
         </div>
       )}
 
