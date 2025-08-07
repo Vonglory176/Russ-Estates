@@ -2,7 +2,7 @@
 import { LinkProps, LogoProps } from "@/types";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { HiMenu, HiX } from "react-icons/hi";
 import { StrapiImage } from "../StrapiImage";
 
@@ -18,7 +18,6 @@ export function Header({ data }: HeaderProps) {
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeLink, setActiveLink] = useState<string>("");
-  const [isMobile, setIsMobile] = useState(false);
   const headerLight = pathname === "/experience";
 
   const MOBILE_BREAKPOINT = 900;
@@ -26,7 +25,7 @@ export function Header({ data }: HeaderProps) {
   // Handle responsive behavior
   useEffect(() => {
     const checkMobile = () => {
-      setIsMobile(window.innerWidth <= MOBILE_BREAKPOINT);
+      // setIsMobile(window.innerWidth <= MOBILE_BREAKPOINT); // This line is removed
       // Close menu when switching from mobile to desktop
       if (window.innerWidth > MOBILE_BREAKPOINT && isMenuOpen) {
         setIsMenuOpen(false);

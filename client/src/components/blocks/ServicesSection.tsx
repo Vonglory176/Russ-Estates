@@ -1,7 +1,7 @@
 import { ReactIcon } from "@/components/elements/ReactIcon";
 import Link from "next/link";
 
-import type { ServicesSectionProps } from "@/types";
+import type { ServiceCardProps, ServicesSectionProps } from "@/types";
 import { StrapiImage } from "../StrapiImage";
 
 function ServiceCard({
@@ -9,26 +9,14 @@ function ServiceCard({
   description,
   icon,
   link,
-}: {
-  title: string;
-  description: string;
-  icon: any;
-  link?: any;
-}) {
+}: ServiceCardProps) {
   const CardContent = (
     <div className="service-card">
       {icon && (
         <div className="service-card__icon">
-          {/* <StrapiImage
-          src={icon.url}
-          alt={icon.alternativeText || `${title} icon`}
-          width={80}
-          height={80}
-        /> */}
-
           <ReactIcon
             name={icon.name}
-            color={icon.color}
+            color={icon.color || "#000"}
             size={icon.size || 80}
             className="service-card__icon-img"
           />
@@ -64,8 +52,7 @@ export function ServicesSection({
   cta,
   backgroundImage,
   backgroundOverlay,
-}: // columns = 3,
-Readonly<ServicesSectionProps>) {
+}: Readonly<ServicesSectionProps>) {
   const columns = 3;
 
   return (
@@ -97,8 +84,9 @@ Readonly<ServicesSectionProps>) {
 
         {/* Services */}
         <div className={`services__grid services__grid--${columns}-cols`}>
-          {services.map((service) => (
+          {services.map((service: any) => (
             <ServiceCard
+              id={service.id}
               key={service.id}
               title={service.title}
               description={service.description}
