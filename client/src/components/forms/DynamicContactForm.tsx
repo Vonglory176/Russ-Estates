@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import { fetchAPI } from '@/utils/fetch-api';
-import { CustomContactForm } from './CustomContactForm';
 import type { ContactFormProps } from '@/types';
 
 interface FormFieldConfig {
@@ -302,7 +301,7 @@ export function DynamicContactForm({ config, className = "" }: DynamicContactFor
       {submitStatus === 'success' && (
         <div className="custom-contact-form__success">
           <h3>Thank you!</h3>
-          <p>Your message has been sent successfully. We'll get back to you soon.</p>
+          <p>Your message has been sent successfully. We&apos;ll get back to you soon.</p>
         </div>
       )}
 
