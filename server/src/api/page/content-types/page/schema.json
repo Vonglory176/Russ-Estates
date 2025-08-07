@@ -17,6 +17,11 @@
     "description": {
       "type": "text"
     },
+    "seo": {
+      "type": "component",
+      "component": "seo.seo",
+      "repeatable": false
+    },
     "blocks": {
       "type": "dynamiczone",
       "components": [

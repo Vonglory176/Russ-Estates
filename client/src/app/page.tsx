@@ -1,7 +1,17 @@
+import type { Metadata } from "next";
 import { BlockRenderer } from "@/components/BlockRenderer";
 
-import { getHomePage } from "@/data/loaders";
+import { getHomePage, getGlobalSettings } from "@/data/loaders";
+import { generatePageMetadata } from "@/utils/metadata";
 import { notFound } from "next/navigation";
+
+export async function generateMetadata(): Promise<Metadata> {
+  return generatePageMetadata(
+    () => getHomePage(),
+    () => getGlobalSettings(),
+    "/"
+  );
+}
 
 async function loader() {
   const data = await getHomePage();

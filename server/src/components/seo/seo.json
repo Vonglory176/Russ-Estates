@@ -1,0 +1,47 @@
+{
+  "collectionName": "components_seo_seos",
+  "info": {
+    "displayName": "SEO",
+    "description": "Search Engine Optimization metadata for pages",
+    "icon": "search"
+  },
+  "options": {},
+  "attributes": {
+    "metaTitle": {
+      "type": "string",
+      "required": false,
+      "maxLength": 60,
+      "minLength": 10
+    },
+    "metaDescription": {
+      "type": "text",
+      "required": false,
+      "maxLength": 160,
+      "minLength": 50
+    },
+    "openGraphImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "canonicalUrl": {
+      "type": "string",
+      "required": false
+    },
+    "noIndex": {
+      "type": "boolean",
+      "default": false,
+      "required": false
+    },
+    "noFollow": {
+      "type": "boolean",
+      "default": false,
+      "required": false
+    },
+    "structuredData": {
+      "type": "json",
+      "required": false
+    }
+  }
+} 

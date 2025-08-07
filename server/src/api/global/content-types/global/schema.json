@@ -14,8 +14,15 @@
     "title": {
       "type": "string"
     },
-    "description": {
-      "type": "text"
+    "websiteName": {
+      "type": "string",
+      "required": false,
+      "default": "Russ Estates"
+    },
+    "seo": {
+      "type": "component",
+      "component": "seo.seo",
+      "repeatable": false
     },
     "header": {
       "type": "component",

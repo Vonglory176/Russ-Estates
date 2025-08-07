@@ -7,6 +7,13 @@ const BLOG_PAGE_SIZE = 2;
 
 const homePageQuery = qs.stringify({
   populate: {
+    seo: {
+      populate: {
+        openGraphImage: {
+          fields: ["url", "alternativeText"],
+        },
+      },
+    },
     blocks: {
       on: {
         "blocks.hero-section": {
@@ -119,6 +126,13 @@ const pageBySlugQuery = (slug: string) =>
       },
     },
     populate: {
+      seo: {
+        populate: {
+          openGraphImage: {
+            fields: ["url", "alternativeText"],
+          },
+        },
+      },
       blocks: {
         on: {
           "blocks.hero-section": {
@@ -183,9 +197,6 @@ const pageBySlugQuery = (slug: string) =>
               },
             },
           },
-          "blocks.senja-widget": {
-            populate: true,
-          },
         },
       },
     },
@@ -202,6 +213,13 @@ export async function getPageBySlug(slug: string) {
 // Loads the global settings (Layout)
 const globalSettingQuery = qs.stringify({
   populate: {
+    seo: {
+      populate: {
+        openGraphImage: {
+          fields: ["url", "alternativeText"],
+        },
+      },
+    },
     header: {
       populate: {
         logo: {

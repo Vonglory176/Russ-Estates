@@ -361,6 +361,32 @@ export interface LayoutHeader extends Struct.ComponentSchema {
   };
 }
 
+export interface SeoSeo extends Struct.ComponentSchema {
+  collectionName: 'components_seo_seos';
+  info: {
+    description: 'Search Engine Optimization metadata for pages';
+    displayName: 'SEO';
+    icon: 'search';
+  };
+  attributes: {
+    canonicalUrl: Schema.Attribute.String;
+    metaDescription: Schema.Attribute.Text &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 160;
+        minLength: 50;
+      }>;
+    metaTitle: Schema.Attribute.String &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 60;
+        minLength: 10;
+      }>;
+    noFollow: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    noIndex: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    openGraphImage: Schema.Attribute.Media<'images'>;
+    structuredData: Schema.Attribute.JSON;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
@@ -384,6 +410,7 @@ declare module '@strapi/strapi' {
       'elements.react-icon': ElementsReactIcon;
       'layout.footer': LayoutFooter;
       'layout.header': LayoutHeader;
+      'seo.seo': SeoSeo;
     }
   }
 }
