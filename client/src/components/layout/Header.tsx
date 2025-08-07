@@ -7,11 +7,11 @@ import { HiMenu, HiX } from "react-icons/hi";
 import { StrapiImage } from "../StrapiImage";
 
 interface HeaderProps {
-  data: {
+  data?: {
     logo: LogoProps;
     navigation: LinkProps[];
     cta: LinkProps;
-  };
+  } | null;
 }
 
 export function Header({ data }: HeaderProps) {

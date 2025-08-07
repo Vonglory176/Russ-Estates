@@ -19,10 +19,18 @@ const geistMono = Geist_Mono({
 });
 
 async function loader() {
-  const { data } = await getGlobalSettings()
-  console.dir(data, { depth: null })
-  if (!data) throw new Error("Failed to fetch global settings")
-  return { header: data?.header, footer: data?.footer  }
+  try {
+    const { data } = await getGlobalSettings()
+    console.dir(data, { depth: null })
+    if (!data) {
+      console.warn("No global settings data available, using fallback")
+      return { header: null, footer: null }
+    }
+    return { header: data?.header, footer: data?.footer }
+  } catch (error) {
+    console.warn("Failed to fetch global settings:", error)
+    return { header: null, footer: null }
+  }
 }
 
 export default async function RootLayout({
