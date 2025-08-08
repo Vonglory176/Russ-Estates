@@ -58,6 +58,10 @@ KEEP IN MIND -------------------------
   - Heading
   - Subheading
 
+- Strapi Data Transfers
+  - https://docs.strapi.io/cms/data-management/transfer
+  - https://www.youtube.com/watch?v=RlAv2RNbQjE
+  - https://github.com/strapi/strapi/issues/17749
 
 GENERAL -------------------------
 
@@ -67,8 +71,6 @@ GENERAL -------------------------
     - Production Vercel is open Access
     - Staging Vercel is protected (make sure Angel & Russ have personal accounts / the general login)
     - Share Strapi login credentials with Angel (Both Production & Staging -- EXPRESS PROCESS FOR EDITING/DEVELOPMENT)
-
-  - Fix Image rendering issues
   
   - Update footer
   
@@ -106,6 +108,13 @@ GENERAL -------------------------
   - Add "Aligntment" options to Services Section
 
   - Replicate the GForm mechanics of "Property Address" automatically breaking into multiple fields (Check competitor sites for examples)
+
+  - Fix Image rendering issues (optimization is currently off)
+    - https://stackoverflow.com/questions/78082019/invalid-image-optimize-request-error-with-nextjs-on-production-with-vercel
+    - https://github.com/vercel/next.js/discussions/20138
+    - https://github.com/vercel/next.js/discussions/80899
+    - https://strapi.io/blog/request-strapi-s-rest-api-behind-a-content-delivery-network-cdn
+    - https://market.strapi.io/plugins/strapi-plugin-cdn-prefix
 
 
 BUGS ----------------------------

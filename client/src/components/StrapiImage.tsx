@@ -18,7 +18,7 @@ export function StrapiImage({
   if (!imageUrl) return null;
 
   // Debug logging
-  console.log('StrapiImage URL:', { original: src, processed: imageUrl });
+  // console.log('StrapiImage URL:', { original: src, processed: imageUrl });
 
   return (
     <Image 
