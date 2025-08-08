@@ -17,7 +17,8 @@ const nextConfig: NextConfig = {
   /* config options here */
   images: {
     // Temporarily disable optimization if needed
-    unoptimized: true,
+    // unoptimized: true,
+    
     remotePatterns: [
       {
         protocol: "http",
@@ -37,10 +38,18 @@ const nextConfig: NextConfig = {
       },
       ...getStrapiDomains(),
     ],
+
     // Add this for better debugging
-    dangerouslyAllowSVG: true,
-    contentDispositionType: 'attachment',
-    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+    // dangerouslyAllowSVG: true,
+    // contentDispositionType: 'attachment',
+    // contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+
+    // // Add these for better external image handling
+    // minimumCacheTTL: 60,
+    // formats: ['image/webp', 'image/avif'],
+    // // Custom loader for Strapi images (alternative approach)
+    // loader: 'default',
+    // loaderFile: undefined,
   },
 };
 

@@ -17,7 +17,20 @@ export function StrapiImage({
   const imageUrl = getStrapiMedia(src);
   if (!imageUrl) return null;
 
-  return <Image src={imageUrl} alt={alt} className={className} {...rest} />;
+  // Debug logging
+  console.log('StrapiImage URL:', { original: src, processed: imageUrl });
+
+  return (
+    <Image 
+      src={imageUrl} 
+      alt={alt} 
+      className={className} 
+      {...rest}
+      // Add these props for better external image handling
+      // unoptimized={false}
+      // priority={false}
+    />
+  );
 }
 
 export function getStrapiMedia(url: string | null) {
