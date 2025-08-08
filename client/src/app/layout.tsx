@@ -63,7 +63,19 @@ GENERAL -------------------------
 
   Before Deployment ////////////////////////////////////
 
-  - Deploy & figure out how best way to transfer data between production / local
+  - Auth Access
+    - Production Vercel is open Access
+    - Staging Vercel is protected (make sure Angel & Russ have personal accounts / the general login)
+    - Share Strapi login credentials with Angel (Both Production & Staging -- EXPRESS PROCESS FOR EDITING/DEVELOPMENT)
+
+  - Fix Image rendering issues
+  
+  - Update footer
+  
+  - Figure out how to start Strapi-Staging in "Development Mode"
+
+  - Add code to display NODE_ENV somewhere in site header?
+
   
   
   After Deployment /////////////////////////////////////
@@ -95,6 +107,7 @@ GENERAL -------------------------
 
   - Replicate the GForm mechanics of "Property Address" automatically breaking into multiple fields (Check competitor sites for examples)
 
+
 BUGS ----------------------------
 
 - "Reversed" Info Section boolean is not working
@@ -104,6 +117,8 @@ BUGS ----------------------------
 
 - Form Validation Controls in Strapi (Required / customErrorMessage / etc.) do not work
   - Currently disabled (removed from all form fields). To reinstate, re-add "Field Validation Rules" to "Form Field Configuration".
+
+- Whole application crashes when server is down. Need to create backup "offline page" (or similar)
 
 
 CONCEPTS ------------------------

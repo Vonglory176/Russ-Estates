@@ -13,7 +13,10 @@
     "strapi": "strapi",
     "upgrade": "npx @strapi/upgrade latest",
     "upgrade:dry": "npx @strapi/upgrade latest --dry",
-    "transfer:to-production": "strapi transfer -- --to https://amazing-courage-61f53eefbb.strapiapp.com/admin"
+    "transfer:to-production": "strapi transfer -- --to https://amazing-courage-61f53eefbb.strapiapp.com/admin",
+    "transfer:from-production": "strapi transfer -- --from https://amazing-courage-61f53eefbb.strapiapp.com/admin",
+    "transfer:to-staging": "strapi transfer -- --to https://heroic-champion-786a121493.strapiapp.com/admin",
+    "transfer:from-staging": "strapi transfer -- --from https://heroic-champion-786a121493.strapiapp.com/admin"
   },
   "dependencies": {
     "@strapi/plugin-cloud": "5.18.0",
