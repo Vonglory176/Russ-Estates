@@ -192,7 +192,7 @@ export function Header({ data }: HeaderProps) {
               headerLight ? "white" : "black"
             }`}
             width={120}
-            height={120}
+            height={60}
           />
         </Link>
         

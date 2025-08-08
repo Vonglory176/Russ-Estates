@@ -73,6 +73,8 @@ GENERAL -------------------------
 
   Before Deployment ////////////////////////////////////
 
+  - Setup Strapi/Vercel webhook to redeploy Vercel each time a change is made to Strapi (Check RE Discord image)
+
   - Update footer  
   
   - Figure out how to start Strapi-Staging in "Development Mode"
