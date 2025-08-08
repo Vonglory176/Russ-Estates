@@ -1,10 +1,23 @@
 import type { NextConfig } from "next";
 
+const getStrapiDomains = () => {
+  const domains = [
+    "amazing-courage-61f53eefbb.media.strapiapp.com", // Production
+    "heroic-champion-786a121493.media.strapiapp.com", // Staging
+  ];
+  
+  return domains.map(domain => ({
+    protocol: "https" as const,
+    hostname: domain,
+    pathname: "/**/*",
+  }));
+};
+
 const nextConfig: NextConfig = {
   /* config options here */
   images: {
     // Temporarily disable optimization if needed
-    // unoptimized: true,
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: "http",
@@ -22,16 +35,7 @@ const nextConfig: NextConfig = {
         hostname: "*.media.strapiapp.com",
         pathname: "/**/*",
       },
-      {
-        protocol: "https",
-        hostname: "amazing-courage-61f53eefbb.media.strapiapp.com",
-        pathname: "/**/*",
-      },
-      {
-        protocol: "https",
-        hostname: "heroic-champion-786a121493.media.strapiapp.com",
-        pathname: "/**/*",
-      },
+      ...getStrapiDomains(),
     ],
     // Add this for better debugging
     dangerouslyAllowSVG: true,
