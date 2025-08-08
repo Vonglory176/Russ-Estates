@@ -63,16 +63,17 @@ KEEP IN MIND -------------------------
   - https://www.youtube.com/watch?v=RlAv2RNbQjE
   - https://github.com/strapi/strapi/issues/17749
 
-GENERAL -------------------------
-
-  Before Deployment ////////////////////////////////////
-
   - Auth Access
     - Production Vercel is open Access
     - Staging Vercel is protected (make sure Angel & Russ have personal accounts / the general login)
     - Share Strapi login credentials with Angel (Both Production & Staging -- EXPRESS PROCESS FOR EDITING/DEVELOPMENT)
-  
-  - Update footer
+
+
+GENERAL -------------------------
+
+  Before Deployment ////////////////////////////////////
+
+  - Update footer  
   
   - Figure out how to start Strapi-Staging in "Development Mode"
 
@@ -109,6 +110,8 @@ GENERAL -------------------------
 
   - Replicate the GForm mechanics of "Property Address" automatically breaking into multiple fields (Check competitor sites for examples)
 
+  - Image Placeholders: https://strapi.io/blog/web-performance-optimization-in-nextjs
+
   - Fix Image rendering issues (optimization is currently off)
     - https://stackoverflow.com/questions/78082019/invalid-image-optimize-request-error-with-nextjs-on-production-with-vercel
     - https://github.com/vercel/next.js/discussions/20138
@@ -118,6 +121,8 @@ GENERAL -------------------------
 
 
 BUGS ----------------------------
+
+- NavMenu (buttons in general?) are blue in iOS
 
 - "Reversed" Info Section boolean is not working
 

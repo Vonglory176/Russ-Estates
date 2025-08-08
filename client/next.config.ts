@@ -9,6 +9,7 @@ const getStrapiDomains = () => {
   return domains.map(domain => ({
     protocol: "https" as const,
     hostname: domain,
+    port: "",
     pathname: "/**/*",
   }));
 };
@@ -17,7 +18,7 @@ const nextConfig: NextConfig = {
   /* config options here */
   images: {
     // Temporarily disable optimization if needed
-    unoptimized: true,
+    // unoptimized: true,
     
     remotePatterns: [
       {

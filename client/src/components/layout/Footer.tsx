@@ -18,6 +18,8 @@ export function Footer({ data }: FooterProps) {
   const { logo, navigation, policies, copy } = data;
   return (
     <footer className="footer">
+
+      {/* Logo & Nav (Top) */}
       <nav className="footer__nav">
         <StrapiImage
           src={logo.image.url}
@@ -39,6 +41,8 @@ export function Footer({ data }: FooterProps) {
           ))}
         </ul>
       </nav>
+
+      {/* Copy & Policies (Bottom) */}
       <div className="footer__policies">
         <ul className="footer__policies-nav">
           {policies.map((item) => (
