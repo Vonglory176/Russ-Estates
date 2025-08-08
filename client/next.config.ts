@@ -18,7 +18,7 @@ const nextConfig: NextConfig = {
   /* config options here */
   images: {
     // Temporarily disable optimization if needed
-    // unoptimized: true,
+    unoptimized: true,
     
     remotePatterns: [
       {
